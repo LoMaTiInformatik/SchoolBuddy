@@ -16,22 +16,22 @@
 
 ## ToDo
 ### Record audio
-[X] Intro
-[ ] Time numbers (0 - 60)
-[ ] Date numbers (1st - 31st)
-[ ] Date months (January - December)
-[ ] Date years ?
-[ ] Weather
-[ ] Setup
-[ ] General answers
+- [X] Intro
+- [ ] Time numbers (0 - 60)
+- [ ] Date numbers (1st - 31st)
+- [ ] Date months (January - December)
+- [ ] Date years ?
+- [ ] Weather
+- [ ] Setup
+- [ ] General answers
 
 ### 3D Print
-[ ] "Buddy"
-[ ] Case
+- [ ] "Buddy"
+- [ ] Case
 
 ### Program
-[ ] Speech recongnition (Google)
-[ ] Setup
-[ ] WebUntis API
-[ ] Config website
-[ ] Command handling
+- [ ] Speech recongnition (Google)
+- [ ] Setup
+- [ ] WebUntis API
+- [ ] Config website
+- [ ] Command handling
