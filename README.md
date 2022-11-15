@@ -48,6 +48,24 @@ flowchart LR;
   gererrfix --> gererrfixval["[possiblefix].wav"];
   gerstartup --> gerstartupval["TBD"];
 ```
+### Speech structure
+- Lesson plan start
+  > "Hier ist der Stundenplan von [heute/morgen]"
+- Lesson info
+  > "Du hast [Lesson name] bei [Teacher name] in Raum [Room name] von [Time begin] bis [Time end]"
+- Lesson cancelled
+  > "[Lesson name] bei [Teacher name] von [Time begin] bis [Time end] fällt aus"
+- Time
+  > "Es ist [Hour] Uhr"
+  > "Es ist [Hour] Uhr [Minute]"
+- Date
+  > "Heute ist der [Day] [Month] [Year]"
+  > "Es ist [Weekday] der [Day] [Month] [Year]"
+- Weather
+  > "[Heute/Morgen] wird es [Weather status] mit einer Regenwahrscheinlichkeit von [Rain percent]"
+  > "[Heute/Morgen] wird es [Weather status]
+- Error
+  > "Es ist ein Fehler aufgetreten. Fehlercode [Error code]. [Possible fix]"
 
 ## Ideas
 ### Aesthetic
