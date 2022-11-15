@@ -57,12 +57,15 @@ flowchart LR;
   > "[Lesson name] bei [Teacher name] von [Time begin] bis [Time end] fällt aus"
 - Time
   > "Es ist [Hour] Uhr"
+
   > "Es ist [Hour] Uhr [Minute]"
 - Date
   > "Heute ist der [Day] [Month] [Year]"
+
   > "Es ist [Weekday] der [Day] [Month] [Year]"
 - Weather
   > "[Heute/Morgen] wird es [Weather status] mit einer Regenwahrscheinlichkeit von [Rain percent]"
+
   > "[Heute/Morgen] wird es [Weather status]
 - Error
   > "Es ist ein Fehler aufgetreten. Fehlercode [Error code]. [Possible fix]"
