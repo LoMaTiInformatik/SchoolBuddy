@@ -4,7 +4,7 @@ This is Lesson Buddy. A voice assistant that sits on your shoulder, that's going
 ### Folder structure
 ```mermaid
 flowchart RL;
-  "/audio/" --> ger["german/"];
+  audio["/audio/"] --> ger["german/"];
   ger --> gerwebu["webuntis/"];
   ger --> gernum["numbers/"];
   ger --> gerdate["date/"];
@@ -13,7 +13,7 @@ flowchart RL;
   gerwebu --> gerwebuteach["teachers/"];
   gerwebu --> gerwebusubj["subjects/"];
   gerwebu --> gerweburoom["rooms/"];
-  gerwebu --> gerwebgener["generic/"];
+  gerwebu --> gerwebugener["generic/"];
   gerwebuteach --> gerteachval["[name].wav"];
   gerwebusubj --> gersubjval["[subject].wav"];
   gerweburoom --> gerroomval["[rooms].wav"];
