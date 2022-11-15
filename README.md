@@ -3,7 +3,7 @@ This is Lesson Buddy. A voice assistant that sits on your shoulder, that's going
 ## Structures
 ### Folder structure
 ```mermaid
-graph RL;
+flowchart RL;
 "/audio/" --> ger["german/"];
 ger --> gerwebu["webuntis/"];
 ger --> gernum["numbers/"];
