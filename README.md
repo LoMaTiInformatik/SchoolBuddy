@@ -80,9 +80,16 @@ flowchart LR;
 - One cable to connect (maybe with USB-Hub)
 - Strap to right or left shoulder-strap on school bag
 
-### Functional
+### Hardware
 - Accelerometer to detect tapping
 - Powerbank in Case
+
+### Functions
+- Give whole lesson plan
+- Give infos about specific lesson
+- Give infos about weather, date and time
+- More general infos (maybe)
+- Reminders for exams (maybe)
 
 ## ToDo
 ### Record audio
@@ -90,7 +97,7 @@ flowchart LR;
 - [ ] Time numbers (0 - 60)
 - [ ] Date numbers (1st - 31st)
 - [ ] Date months (January - December)
-- [ ] Date years ?
+- [ ] Date years (2022 - 2035)
 - [ ] Weather
 - [ ] Setup
 - [ ] General answers
