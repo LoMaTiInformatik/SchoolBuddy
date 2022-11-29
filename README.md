@@ -51,6 +51,7 @@ flowchart LR;
   gerstartup --> gerstartupval["TBD"];
 ```
 </details>
+
 ### Speech structure
 - Lesson plan start
   > "Hier ist der Stundenplan von [heute/morgen]"
