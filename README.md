@@ -2,6 +2,8 @@
 This is Lesson Buddy. A voice assistant that sits on your shoulder, that's going to help you in your school life.
 ## Structures
 ### Folder structure
+<details>
+<summary>Click me</summary>
 ```mermaid
 flowchart LR;
   audio["/audio/"] --> ger["german/"];
@@ -48,6 +50,7 @@ flowchart LR;
   gererrfix --> gererrfixval["[possiblefix].wav"];
   gerstartup --> gerstartupval["TBD"];
 ```
+</details>
 ### Speech structure
 - Lesson plan start
   > "Hier ist der Stundenplan von [heute/morgen]"
