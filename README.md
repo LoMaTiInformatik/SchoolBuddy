@@ -3,7 +3,7 @@ This is Lesson Buddy. A voice assistant that sits on your shoulder, that's going
 ## Structures
 ### Folder structure
 <details>
-<summary>Click me</summary>
+<summary>Audio</summary>
 
   ```mermaid
 flowchart LR;
@@ -58,7 +58,11 @@ flowchart LR;
 - Lesson plan start
   > "Hier ist der Stundenplan von [heute/morgen]"
 - Lesson info
-  > "Du hast [Lesson name] bei [Teacher name] in Raum [Room name] von [Time begin] bis [Time end]"
+  > "Du hast [Lesson name] bei [Teacher name] im Raum [Room name] von [Time begin] bis [Time end]"
+- Teacher changed
+  > "[Lesson name] bei [Original teacher name] wird heute von [Substitute teacher name] in Raum [Room name] von [Time begin] bis [Time end] unterrichtet.
+- Room changed
+  > "[Lesson name] bei [Teacher name] von [Time begin] bis [Time end] findet heute im Raum [Room name] statt."
 - Lesson cancelled
   > "[Lesson name] bei [Teacher name] von [Time begin] bis [Time end] fällt aus"
 - Time
