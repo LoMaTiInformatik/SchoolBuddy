@@ -4,7 +4,8 @@ This is Lesson Buddy. A voice assistant that sits on your shoulder, that's going
 ### Folder structure
 <details>
 <summary>Click me</summary>
-```mermaid
+
+  ```mermaid
 flowchart LR;
   audio["/audio/"] --> ger["german/"];
   ger --> gerwebu["webuntis/"];
@@ -50,6 +51,7 @@ flowchart LR;
   gererrfix --> gererrfixval["[possiblefix].wav"];
   gerstartup --> gerstartupval["TBD"];
 ```
+  
 </details>
 
 ### Speech structure
