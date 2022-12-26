@@ -60,6 +60,23 @@ flowchart LR;
 ```
   
 </details>
+<details>
+<summary>src</summary>
+
+  ```mermaid
+  flowchart LR;
+  src["src/"] --> html["html/"];
+  html --> login["login.php"];
+  html --> index["index.html"];
+  html --> profile["profile.html"];
+  html --> style["style.css"];
+  html --> actions["actions/"];
+  actions --> changesetting["chngsett.php"];
+  actions --> getsettings["getsett.php"];
+  actions --> resetall["resetall.php"];
+```
+
+</details>
 
 ### Speech structure
 - Lesson plan start
