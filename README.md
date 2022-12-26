@@ -3,7 +3,7 @@ This is Lesson Buddy. A voice assistant that sits on your shoulder, that's going
 ## Structures
 ### Folder structure
 <details>
-<summary>Audio</summary>
+<summary>audio</summary>
 
   ```mermaid
 flowchart LR;
