@@ -69,7 +69,7 @@ flowchart LR;
   html --> login["login.php"];
   html --> index["index.html"];
   html --> profile["profile.html"];
-  html --> style["style.css"];
+  html --> stylecss["style.css"];
   html --> actions["actions/"];
   actions --> changesetting["chngsett.php"];
   actions --> getsettings["getsett.php"];
