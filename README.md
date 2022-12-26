@@ -111,7 +111,8 @@ flowchart LR;
 ## ToDo
 ### Record audio
 - [X] Intro
-- [ ] Time numbers (0 - 60)
+- [ ] WebUntis responses
+- [ ] Numbers (0 - 100)
 - [ ] Date numbers (1st - 31st)
 - [ ] Date months (January - December)
 - [ ] Date years (2022 - 2035)
