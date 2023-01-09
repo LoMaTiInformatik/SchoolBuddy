@@ -79,6 +79,10 @@ flowchart LR;
 </details>
 
 ### Speech structure
+
+<details>
+<summary>WebUntis</summary>
+
 - Lesson plan start
   > "Hier ist der Stundenplan von [heute/morgen]"
 - Lesson info
@@ -89,6 +93,11 @@ flowchart LR;
   > "[Lesson name] bei [Teacher name] von [Time begin] bis [Time end] findet heute im Raum [Room name] statt."
 - Lesson cancelled
   > "[Lesson name] bei [Teacher name] von [Time begin] bis [Time end] fällt aus"
+  
+</details>
+<details>
+<summary>Misc.</summary>
+
 - Time
   > "Es ist [Hour] Uhr"
 
@@ -101,8 +110,19 @@ flowchart LR;
   > "[Heute/Morgen] wird es [Weather status] mit einer Regenwahrscheinlichkeit von [Rain percent]"
 
   > "[Heute/Morgen] wird es [Weather status]
+
+</details>
+<details>
+<summary>System</summary>
+
 - Error
   > "Es ist ein Fehler aufgetreten. Fehlercode [Error code]. [Possible fix]"
+- Update (On Startup)
+  > "Es ist ein Update verfügbar auf die Version [Version number]. Bitte gehe auf die Konfigurierungswebsite um es zu installieren."
+- Update (On Install update command)
+  > "Das Update wird installiert. Bitte schalte das Gerät nicht aus."
+
+</details>
 
 ## Ideas
 ### Aesthetic
