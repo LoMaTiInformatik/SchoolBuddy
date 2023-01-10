@@ -85,14 +85,24 @@ flowchart LR;
 
 - Lesson plan start
   > "Hier ist der Stundenplan von [heute/morgen]"
+  
+  > "Stundenplan von [heute/morgen]"
 - Lesson info
   > "Du hast [Lesson name] bei [Teacher name] im Raum [Room name] von [Time begin] bis [Time end]"
+  
+  > "[Lesson name], [Teacher name] im Raum [Room name] von [Time begin] bis [Time end]" (short)(No time if next lesson is asked)
 - Teacher changed
-  > "[Lesson name] bei [Original teacher name] wird heute von [Substitute teacher name] in Raum [Room name] von [Time begin] bis [Time end] unterrichtet.
+  > "[Lesson name] bei [Original teacher name] wird heute von [Substitute teacher name] in Raum [Room name] von [Time begin] bis [Time end] unterrichtet."
+  
+  > "Vertretung [Lesson name], [Original teacher name] von [Substitute teacher name] in Raum [Room name] von [Time begin] bis [Time end]." (short)(No time if next lesson is asked)
 - Room changed
   > "[Lesson name] bei [Teacher name] von [Time begin] bis [Time end] findet heute im Raum [Room name] statt."
+  
+  > "Raumänderung [Lesson name], [Teacher name] im Raum [Room name] von [Time begin] bis [Time end]." (short)(No time if next lesson is asked)
 - Lesson cancelled
   > "[Lesson name] bei [Teacher name] von [Time begin] bis [Time end] fällt aus"
+  
+  > "Ausfall [Lesson name], [Teacher name] von [Time begin] bis [Time end]." (short(needed?))(No time if next lesson is asked. As well as the next lesson after the cancellation)
   
 </details>
 <details>
@@ -109,7 +119,7 @@ flowchart LR;
 - Weather
   > "[Heute/Morgen] wird es [Weather status] mit einer Regenwahrscheinlichkeit von [Rain percent]"
 
-  > "[Heute/Morgen] wird es [Weather status]
+  > "[Heute/Morgen] wird es [Weather status]"
 
 </details>
 <details>
