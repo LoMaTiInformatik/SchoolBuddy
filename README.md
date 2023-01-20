@@ -1,9 +1,9 @@
-# LessonBuddy
-This is Lesson Buddy. A voice assistant that sits on your shoulder, that's going to help you in your school life.
+# SchoolBuddy Brainstorm
+This is SchoolBuddy. A voice assistant that sits on your shoulder, that's going to help you in your school life.
 ## Structures
 ### Folder structure
 <details>
-<summary>audio</summary>
+<summary>audio (maybe unused due to tts</summary>
 
   ```mermaid
 flowchart LR;
