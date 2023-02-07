@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+speechrecognition = "*"
+openai-whisper = "*"
+pyaudio = "*"
+soundfile = "*"
+ffmpeg-python = {git = "https://github.com/kkroening/ffmpeg-python.git"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
