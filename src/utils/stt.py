@@ -14,15 +14,15 @@ def listen():
         text = r.recognize_google(audio, language="de-DE", show_all=False)
         return {
             "error": "",
-            "text": text
+            "value": text
         }
     except sr.UnknownValueError:
         return {
             "error": "stt-1",
-            "text": ""
+            "value": ""
         }
     except:
         return {
             "error": "stt-2",
-            "text": ""
+            "value": ""
         }
