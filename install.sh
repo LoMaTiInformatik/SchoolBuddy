@@ -47,7 +47,9 @@ else
 fi
 
 setconfig () {
-
+    clear 
+    echo $'\nDone\n\n'
+    echo "$SETT_ARRAY"
 }
 
 configure () {
