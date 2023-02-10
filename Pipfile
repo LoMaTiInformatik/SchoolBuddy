@@ -9,6 +9,8 @@ pyaudio = "*"
 ffmpeg-python = {git = "https://github.com/kkroening/ffmpeg-python.git"}
 tts = "*"
 sounddevice = "*"
+webuntis = "*"
+mysql-connector-python = "*"
 
 [dev-packages]
 

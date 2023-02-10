@@ -1,0 +1,13 @@
+[Unit]
+Description="SchoolBuddy Autostart Service"
+Wants=mysql.service apache2.service
+After=mysql.service apache2.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/schoolbuddy
+ExecStart=pipenv run start
+
+[Install]
+Alias=schoolbuddy.service
+WantedBy=multi-user.target
