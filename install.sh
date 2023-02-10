@@ -7,7 +7,7 @@ fi
 
 declare -A SETT_ARRAY=()
 
-currentpage = "main"
+currentpage="main"
 
 read -rp $'\nSchoolBuddy Install Script\n\nPlease choose:\n\n1 - Install and configure SchoolBuddy\n2 - Uninstall SchoolBuddy\nEnter - Cancel\n\n> ' act
 
@@ -40,6 +40,8 @@ if [ "$act" == 1 ]; then
 elif [ "$act" == 2 ]; then
     echo $'\nThis is not yet possible.'
 
+elif [ "$act" == 3 ]; then
+    configure "init"
 else
     echo $'\nCancelled.'
 fi
@@ -52,41 +54,94 @@ configure () {
     if [ "$1" == "init" ]; then
         renderconfigdisplay "main"
     else
-        read -rp $'\n> ' readval
+        read -n 1 -rp $'\n> ' readval
         if [ "$readval" == "b" ] && [ "$currentpage" != "main" ]; then
-            currentpage = "main"
+            currentpage="main"
             renderconfigdisplay "main"
         elif [ "$readval" == "c" ] && [ "$currentpage" == "main" && "$(getmissing)" == "none" ]; then
             setconfig
-        elif [ "$readval" == "1" ]; then
-            local val = $(getsetval "admpwd")
-            checkinput "pwd" "$val"
-            if [ "$?" == 1]; then
-                renderfail
-            else
-                SETT_ARRAY[admpwd] = "$val"
+        else
+            local name=""
+            local type="none"
+            if [ "$readval" == "1" ]; then
+                case "$currentpage" in
+                    main)
+                    name="admpwd"
+                    type="pwd"
+                    ;;
+                    wifi)
+                    name="wifissid"
+                    type="ssid"
+                    ;;
+                    webu)
+                    name="webuserver"
+                    type="url"
+                    ;;
+                esac
+            elif [ "$readval" == "2" ]; then
+                case "$currentpage" in
+                    main)
+                    name="sqlpwd"
+                    type="pwd"
+                    ;;
+                    wifi)
+                    name="wifipwd"
+                    type="pwd"
+                    ;;
+                    webu)
+                    name="webuschool"
+                    type="text"
+                    ;;
+                esac
+            elif [ "$readval" == "3" ]; then
+                case "$currentpage" in
+                    main)
+                    name="wifi"
+                    type="chngpg"
+                    ;;
+                    wifi)
+                    name=""
+                    type="none"
+                    ;;
+                    webu)
+                    name="webuuser"
+                    type="text"
+                    ;;
+                esac
+            elif [ "$readval" == "4" ]; then
+                case "$currentpage" in
+                    main)
+                    name="webu"
+                    type="chngpg"
+                    ;;
+                    wifi)
+                    name=""
+                    type="none"
+                    ;;
+                    webu)
+                    name="webupwd"
+                    type="pwd"
+                    ;;
+                esac
             fi
-            renderconfigdisplay "$currentpage"
-        elif [ "$readval" == "2" ]; then
-            local val = $(getsetval "sqlpwd")
-            checkinput "pwd" "$val"
-            if [ "$?" == 1]; then
-                renderfail
+            if [ "$type" == "none" ]; then
+                renderfail "nooption"
+                renderconfigdisplay "$currentpage"
+            elif [ "$type" == "chngpg" ]; then
+                currentpage="$name"
+                renderconfigdisplay "$name"
             else
-                SETT_ARRAY[sqlpwd] = "$val"
+                val=$(getsettval "$name")
+                checkinput "$type" "$val"
+                if [ "$?" == 1]; then
+                    renderfail "syntax"
+                else
+                    SETT_ARRAY[$name]="$val"
+                fi
+                renderconfigdisplay "$currentpage"
             fi
-            renderconfigdisplay "$currentpage"
-        elif [ "$readval" == "3" ]; then
-            currentpage = "wifi"
-            renderconfigdisplay "wifi"
-        elif [ "$readval" == "4" ]; then
-            currentpage = "webu"
-            renderconfigdisplay "webu"
         fi
-
-
-
-
+    fi
 }
 
 getsettval () {
@@ -213,7 +268,11 @@ checkinput () {
 
 renderfail () {
     clear
-    echo $'\nERROR: Could not save setting'
-    echo $'\nPlease make sure you follow all guidelines'
+    if [ "$1" == "syntax" ]; then
+        echo $'\nERROR: Could not save setting'
+        echo $'\nPlease make sure you follow the correct syntax'
+    elif [ "$1" == "nooption" ]; then
+        echo $'\nThat option doesn\'t exist'
+    fi
     read -rp $'\nPress Enter to continue' usl
 }
