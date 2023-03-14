@@ -1,6 +1,6 @@
 import os
-from setup import firstrun
+from setup import first_run
 from utils.stt import listen
 
 if (os.getenv('SCHOOLBUDDY_FIRSTRUN') == "yes"):
-    firstrun()
+    first_run()

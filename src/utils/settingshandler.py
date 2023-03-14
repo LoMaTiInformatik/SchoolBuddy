@@ -10,13 +10,15 @@ db = mysql.connect(
     database="schoolbuddy"
 )
 
-def getSettings():
+def get_settings():
     return #Settingsarray
 
 
-def getSetting(settname:str):
+def get_setting(settname:str):
     return #Setting
 
-def setInitSettings():
-
+def set_init_settings():
+    admpwd=os.getenv('SCHOOLBUDDY_ADMPWD')
+    wifissid=os.getenv('SCHOOLBUDDY_WIFISSID')
+    wifipwd=os.getenv('SCHOOLBUDDY_WIFIPWD')
     return True

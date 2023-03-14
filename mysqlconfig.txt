@@ -12,11 +12,18 @@ CREATE TABLE settings (
 CREATE TABLE wifi (
     id int NOT NULL AUTO_INCREMENT,
     ssid varchar(255) NOT NULL,
-    open int DEFAULT 0 CHECK (),
+    open int DEFAULT 0,
     pwd varchar(255),
     priority int DEFAULT 1,
     hidden int DEFAULT 0,
-)
+    PRIMARY KEY (id)
+);
+CREATE TABLE devices (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    type ENUM(speaker,microphone,button) NOT NULL,
+    PRIMARY KEY (id)
+);
 CREATE USER 'schoolbuddy'@'localhost' IDENTIFIED BY 'password';
 GRANT SELECT, INSERT, UPDATE ON 'schoolbuddy'.* TO 'schoolbuddy'@'localhost';
 FLUSH PRIVILEGES;
