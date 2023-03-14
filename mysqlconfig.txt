@@ -1,0 +1,11 @@
+CREATE DATABASE 'schoolbuddy';
+USE 'schoolbuddy';
+CREATE TABLE settings (
+    id int NOT NULL AUTO_INCREMENT,
+    setting_name varchar(255) NOT NULL,
+    value text(65535),
+    type ENUM(text,password,bool,number,language),
+    minVal int,
+    maxVal int,
+    PRIMARY KEY (id)
+);

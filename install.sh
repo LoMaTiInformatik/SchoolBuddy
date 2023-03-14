@@ -299,6 +299,10 @@ uninstall () {
     fi
 }
 
+configuremysql () {
+    return
+}
+
 read -rp $'\nSchoolBuddy Install Script\n\nPlease choose:\n\n1 - Install and configure SchoolBuddy\n2 - Uninstall SchoolBuddy\nEnter - Cancel\n\n> ' act
 
 if [ "$act" == 1 ]; then
