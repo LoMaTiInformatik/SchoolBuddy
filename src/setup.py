@@ -1,6 +1,12 @@
 import os
-from utils.settingshandler import set_init_settings
+from utils.sqlhandler import set_init_settings
 
 def first_run():
-    set_init_settings()
-    return
+    res = set_init_settings()
+    if (res["error"] != ""):
+        return res
+    
+    return {
+        "error": "",
+        "value": "true"
+    }
