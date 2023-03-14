@@ -1,10 +1,8 @@
-CREATE DATABASE 'schoolbuddy';
-USE 'schoolbuddy';
 CREATE TABLE settings (
     id int NOT NULL AUTO_INCREMENT,
     setting_name varchar(255) NOT NULL,
     value text(65535),
-    type ENUM(text,password,bool,number,language) NOT NULL,
+    type ENUM('text','password','bool','number','language','url') NOT NULL,
     minVal int,
     maxVal int,
     PRIMARY KEY (id)
@@ -24,6 +22,14 @@ CREATE TABLE devices (
     type ENUM(speaker,microphone,button) NOT NULL,
     PRIMARY KEY (id)
 );
-CREATE USER 'schoolbuddy'@'localhost' IDENTIFIED BY 'password';
-GRANT SELECT, INSERT, UPDATE ON 'schoolbuddy'.* TO 'schoolbuddy'@'localhost';
-FLUSH PRIVILEGES;
+INSERT INTO settings (setting_name,type,minVal,maxVal)
+VALUES ('adm_pwd','password',NULL,NULL),
+('default_wifi_ssid','text',NULL,NULL),
+('default_wifi_pwd','password',NULL,NULL),
+('webu_user','text',NULL,NULL),
+('webu_server','url',NULL,NULL),
+('webu_school','text',NULL,NULL),
+('webu_pwd','password',NULL,NULL),
+('webu_class','text',NULL,NULL),
+('short_answer','bool',NULL,NULL),
+('language','language',NULL,NULL);

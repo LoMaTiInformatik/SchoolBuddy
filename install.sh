@@ -300,6 +300,11 @@ uninstall () {
 }
 
 configuremysql () {
+    mysql -u root -e "CREATE schoolbuddy"
+    mysql -u root schoolbuddy < mysqlconfig.sql
+    mysql -u root -e "CREATE USER 'schoolbuddy'@'localhost' IDENTIFIED BY 'password'"
+    mysql -u root -e "GRANT SELECT, INSERT, UPDATE ON 'schoolbuddy'.* TO 'schoolbuddy'@'localhost'"
+    mysql -u root -e "FLUSH PRIVILEGES"
     return
 }
 
