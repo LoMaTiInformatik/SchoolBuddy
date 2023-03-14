@@ -13,3 +13,7 @@ Lois: Das Konfigurationsskript ist fertig. Das Installationsskript kann ich erst
 ### 13.02.2023
 
 Lois: Die bereits aufgetretenen Fehler des Installationsskripes wurden behoben.
+
+### 14.03.2023
+
+Lois: Mit Setup begonnen

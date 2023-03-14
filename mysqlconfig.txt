@@ -4,8 +4,19 @@ CREATE TABLE settings (
     id int NOT NULL AUTO_INCREMENT,
     setting_name varchar(255) NOT NULL,
     value text(65535),
-    type ENUM(text,password,bool,number,language),
+    type ENUM(text,password,bool,number,language) NOT NULL,
     minVal int,
     maxVal int,
     PRIMARY KEY (id)
 );
+CREATE TABLE wifi (
+    id int NOT NULL AUTO_INCREMENT,
+    ssid varchar(255) NOT NULL,
+    open int DEFAULT 0 CHECK (),
+    pwd varchar(255),
+    priority int DEFAULT 1,
+    hidden int DEFAULT 0,
+)
+CREATE USER 'schoolbuddy'@'localhost' IDENTIFIED BY 'password';
+GRANT SELECT, INSERT, UPDATE ON 'schoolbuddy'.* TO 'schoolbuddy'@'localhost';
+FLUSH PRIVILEGES;
