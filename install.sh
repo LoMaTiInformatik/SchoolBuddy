@@ -9,6 +9,16 @@ declare -A SETT_ARRAY=()
 
 currentpage="main"
 
+configuremysql () {
+    usrstr="CREATE USER 'schoolbuddy'@'localhost' IDENTIFIED BY '""${SETT_ARRAY[sqlpwd]}"
+    mysql -u root -e "CREATE schoolbuddy"
+    mysql -u root schoolbuddy < mysqlconfig.sql
+    mysql -u root -e "$usrstr"
+    mysql -u root -e "GRANT SELECT, INSERT, UPDATE ON 'schoolbuddy'.* TO 'schoolbuddy'@'localhost'"
+    mysql -u root -e "FLUSH PRIVILEGES"
+    return
+}
+
 setconfig () {
     clear 
     echo $'\nDone\n\n'
@@ -20,6 +30,8 @@ setconfig () {
         str="export ""SCHOOLBUDDY_""$upkey""=\"""${SETT_ARRAY[$key]}""\""$'\n'
         echo "$str" >> /etc/profile.d/schoolbuddy.sh
     done
+    echo "export ""SCHOOLBUDDY_FIRSTRUN""=\"""yes""\""$'\n' >> /etc/profile.d/schoolbuddy.sh
+    configuremysql
 }
 
 configure () {
@@ -297,15 +309,6 @@ uninstall () {
     if [ "$1" == "y" ]; then
         apt-get uninstall mysql-server ffmpeg apache2 espeak-ng -y
     fi
-}
-
-configuremysql () {
-    mysql -u root -e "CREATE schoolbuddy"
-    mysql -u root schoolbuddy < mysqlconfig.sql
-    mysql -u root -e "CREATE USER 'schoolbuddy'@'localhost' IDENTIFIED BY 'password'"
-    mysql -u root -e "GRANT SELECT, INSERT, UPDATE ON 'schoolbuddy'.* TO 'schoolbuddy'@'localhost'"
-    mysql -u root -e "FLUSH PRIVILEGES"
-    return
 }
 
 read -rp $'\nSchoolBuddy Install Script\n\nPlease choose:\n\n1 - Install and configure SchoolBuddy\n2 - Uninstall SchoolBuddy\nEnter - Cancel\n\n> ' act
