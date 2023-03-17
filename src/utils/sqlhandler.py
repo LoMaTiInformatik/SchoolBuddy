@@ -10,11 +10,49 @@ db = mysql.connect(
     database="schoolbuddy"
 )
 
-def get_settings():
-    return #Settingsarray
+def get_settings(valueonly: bool = True):
+    try:
+        cursor = db.cursor()
+
+        sql = "SELECT "
+        if (valueonly):
+            sql += "setting_name, value, type"
+        else:
+            sql += "*"
+        sql += " FROM settings;"
+
+        cursor.execute(sql)
+
+        sqlres = cursor.fetchall()
+
+        result = {}
+
+        for x in sqlres:
+            val = {
+                "value": x[2],
+                "type": x[3]
+            }
+            result[x[1]] = val
+
+        ret = {
+            "error": "",
+            "value": result
+        }
+        return ret
+    
+    except:
+        return {
+            "error": "mysql-1",
+            "value": ""
+        }
+    
+    return {
+        "error": "unknown",
+        "value": "You shouldn't be here."
+    }
 
 
-def get_setting(settname:str):
+def get_setting(settname: str):
     return #Setting
 
 def set_init_settings():
