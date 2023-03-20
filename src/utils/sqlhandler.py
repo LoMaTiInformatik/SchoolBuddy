@@ -29,10 +29,10 @@ def get_settings(valueonly: bool = True):
 
         for x in sqlres:
             val = {
-                "value": x[2],
-                "type": x[3]
+                "value": x[1],
+                "type": x[2]
             }
-            result[x[1]] = val
+            result[x[0]] = val
 
         ret = {
             "error": "",
@@ -52,8 +52,44 @@ def get_settings(valueonly: bool = True):
     }
 
 
-def get_setting(settname: str):
-    return #Setting
+def get_setting(settname: str, valueonly: bool = True):
+    try:
+        cursor = db.cursor()
+        sql = "SELECT "
+
+        if (valueonly):
+            sql += "setting_name, value, type"
+        else:
+            sql += "*"
+        
+        sql += " FROM settings WHERE setting_name =" + "'" + settname + "';"
+
+        cursor.execute(sql)
+
+        sqlres = cursor.fetchonce()
+
+        result = {
+            "value": sqlres[1],
+            "type": sqlres[2]
+        }
+
+        return {
+            "error": "",
+            "value": {
+                sqlres[0]: result
+            }
+        }
+    
+    except:
+        return {
+            "error": "mysql-1",
+            "value": ""
+        }
+    
+    return {
+        "error": "unknown",
+        "value": "You shouldn't be here."
+    }
 
 def set_init_settings():
     try:
