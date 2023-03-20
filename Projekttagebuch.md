@@ -17,3 +17,15 @@ Lois: Die bereits aufgetretenen Fehler des Installationsskripes wurden behoben.
 ### 14.03.2023
 
 Lois: Mit Setup begonnen
+
+### 15.03.2023
+
+Lois: Setup weitergeführt
+
+### 17.03.2023
+
+Lois: SQL-Handler begonnen
+
+### 20.03.2023
+
+Lois: SQL-Handler weitergeführt
