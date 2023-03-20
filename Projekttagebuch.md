@@ -1,31 +1,55 @@
+<!-- Muss noch neu geschrieben werden - bin gerade dabei, Max-->
+
+<!--Written by Max Leon Guwa (OrangePurgatory; https://github.com/OrangePurgatory)-->
+
+
+<head>
+<h1 align="center">Schoolbuddy - Projekttagebuch</h1> 
+</head>
+<h3 align="center"> Ein Projekt von Lois und Max 11p </h3>
+</br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/105984356/186677878-5eddbf06-304d-4ea7-90db-5ddba9e40dbf.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/105984356/186676647-16dacef0-4117-4750-afc1-1d4d6409e6d3.png">
+  <img alt="" src="">
+</picture>
+
+
+<h3 align="left">Stormarnschule Ahrensburg <br/> Informatik, Buhl <br/> Schuljahr 2022/23, 2. Halbjahr </br> </h3> </div>
+<h3 align="left"> &#10132; <a href="https://github.com/LoMaTiInformatik/SchoolBuddy/blob/main/README.md"> Projektseite</a> </h3> 
+</br>
+
+
+
 ### 06.02.2023
 
-Lois: Ich habe heute die "speak()" und die "listen()" Funktionen vollendet. Dadurch kann das Programm bereits mich verstehen und auch reden.
+Wir haben heute die "speak()" und die "listen()" Funktionen vollendet. Dadurch kann das Programm bereits uns verstehen und auch reden.
 
 ### 08.02.2023
 
-Lois: Heute habe ich mit dem Installations- und Konfigurationsskript angefangen.
+Heute haben wir mit dem Installations- und Konfigurationsskript angefangen.
 
 ### 10.02.2023
 
-Lois: Das Konfigurationsskript ist fertig. Das Installationsskript kann ich erst vollenden, wenn ich mit dem allgemeinen Programm fertig bin.
+Das Konfigurationsskript ist fertig. Das Installationsskript können wir erst vollenden, wenn wir mit dem allgemeinen Programm fertig sind.
 
 ### 13.02.2023
 
-Lois: Die bereits aufgetretenen Fehler des Installationsskripes wurden behoben.
+Die bereits aufgetretenen Fehler des Installationsskripes wurden behoben.
 
 ### 14.03.2023
 
-Lois: Mit Setup begonnen
+Mit Setup begonnen
 
 ### 15.03.2023
 
-Lois: Setup weitergeführt
+Setup weitergeführt
 
 ### 17.03.2023
 
-Lois: SQL-Handler begonnen
+SQL-Handler begonnen
 
 ### 20.03.2023
 
-Lois: SQL-Handler weitergeführt
+SQL-Handler weitergeführt
