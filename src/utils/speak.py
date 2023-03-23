@@ -10,6 +10,9 @@ def speak(text):
         "value": ""
     }
 
+def question(text):
+    pass 
+
 def cancel():
     try:
         sd.stop()

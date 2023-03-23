@@ -3,6 +3,8 @@ import speech_recognition as sr
 
 def listen():
 
+    """Returns the spoken text."""
+
     r = sr.Recognizer()
 
     mic = sr.Microphone()
