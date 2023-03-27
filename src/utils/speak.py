@@ -13,6 +13,7 @@ def speak(text):
         error: Error-Code if any (str)
         value: None (str)
     """
+
     tts = TTS("tts_models/de/thorsten/tacotron2-DDC")
     wav = tts.tts(text=text)
     sd.play(wav, 23000)
@@ -33,6 +34,7 @@ def question(text):
         error: Error-Code if any (str)
         value: Answertext (str)
     """
+    
     pass 
 
 def cancel():
