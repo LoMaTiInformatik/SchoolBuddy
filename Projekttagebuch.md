@@ -87,7 +87,7 @@ sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
 
 
 <h2 id="kapitel4">4. Materialien</h2>
-Folgend
+Coming soon
 
 <h2 id="kapitel5">5. Quellen</a></h2>
 <a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a><br>
