@@ -40,16 +40,16 @@ Die bereits aufgetretenen Fehler des Installationsskripes wurden behoben.
 
 ### 14.03.2023
 
-Mit Setup begonnen
+setup.py angefangen zu schreiben. Nun führt es sqlhandler.py aus um die Datenbank zu populieren.
 
 ### 15.03.2023
 
-Setup weitergeführt
+Minimale Veränderungen am Installationsskript getätigt
 
 ### 17.03.2023
 
-SQL-Handler begonnen
+sqlhandler.py kann nun die Funktion set_init_settings(). Mit Hilfe dieser wird nun die Datenbank mit den Werten aus dem Konfigurationsskript gefüllt.
 
 ### 20.03.2023
 
-SQL-Handler weitergeführt
+sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
