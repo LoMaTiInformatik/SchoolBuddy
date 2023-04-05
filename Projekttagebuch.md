@@ -42,7 +42,10 @@
 
 
 <h2 id="kapitell">1. Einleitung</h2>
-Folgend
+Hallo und herzlich Wilkommen zu unserem Projekttagebuch. Hier protokollieren wir unseren Arbeitsprozess, um später wieder zurückgucken zu können und sehen, was wir an welchem Tag genau gemacht haben. Einige Protokolle enthalten Beispielcodes, um unseren Arbeitsprozess zu visualisieren.
+
+Der Großteil des Codes ist in dem Unterordner /src/ hier auf GitHub zu finden oder unter dem folgenden Link:
+<p><a href="https://github.com/LoMaTiInformatik/SchoolBuddy/tree/main/src">Die Codes</a></p>
 
 
 <h2 id="kapitel2">2. Protokolle</a></h2></li>
