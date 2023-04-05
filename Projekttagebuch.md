@@ -86,4 +86,4 @@ sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
 Folgend
 
 <h2 id="kapitel5">5. Quellen</a></h2>
-<p><a href="https://github.com/espeak-ng/espeak-ng">"ESpeak-ng</a></p>
+<p><a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a></p>
