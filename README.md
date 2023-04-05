@@ -26,6 +26,7 @@
 <p><a href="#kapitel5">5. Fazit</a></p>
 <p><a href="#kapitel6">6. Quellen</a></p>
 <p><a href="#kapitel7">7. Eigenständigkeitserklärung</a></p>
+<br>
 
 
 <h2 id="kapitell">1. Einleitung</h2>
