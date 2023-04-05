@@ -42,13 +42,13 @@
 
 
 <h2 id="kapitell">1. Einleitung</h2>
-Hallo und herzlich Wilkommen zu unserem Projekttagebuch. Hier protokollieren wir unseren Arbeitsprozess, um später wieder zurückgucken zu können und sehen, was wir an welchem Tag genau gemacht haben. Einige Protokolle enthalten Beispielcodes, um unseren Arbeitsprozess zu visualisieren.
+Hallo und herzlich Wilkommen zu unserem Projekttagebuch. Hier protokollieren wir unseren Arbeitsprozess, um später wieder zurückgucken zu können und sehen, was wir an welchem Tag genau gemacht haben. Einige Protokolle enthalten Beispielcodes, um unseren Arbeitsprozess zu visualisieren.<br>
 
 Der Großteil des Codes ist in dem Unterordner /src/ hier auf GitHub zu finden oder unter dem folgenden Link:
-<p><a href="https://github.com/LoMaTiInformatik/SchoolBuddy/tree/main/src">Die Codes</a></p>
+<a href="https://github.com/LoMaTiInformatik/SchoolBuddy/tree/main/src">Die Codes</a>
 
 
-<h2 id="kapitel2">2. Protokolle</a></h2></li>
+<h2 id="kapitel2">2. Protokolle</h2>
 
 ### Protokoll zum 06.02.2023
 
@@ -86,11 +86,11 @@ sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
 
 
 
-<h2 id="kapitel4">4. Materialien</a></h2>
+<h2 id="kapitel4">4. Materialien</h2>
 Folgend
 
 <h2 id="kapitel5">5. Quellen</a></h2>
-<p><a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a></p>
-<p><a href="https://github.com/thorstenMueller/Thorsten-Voice">Thorsten Voice</a></p>
-<p><a href="https://www.mysql.com/">MySQL</a></p>
-<p style="margin-top: 5px;">Alle weiteren Quellen sind in der Pipfile.lock Datei zu finden.</p>
+<a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a>
+<a href="https://github.com/thorstenMueller/Thorsten-Voice">Thorsten Voice</a>
+<a href="https://www.mysql.com/">MySQL</a>
+Alle weiteren Quellen sind in der Pipfile.lock Datei zu finden.
