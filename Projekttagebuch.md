@@ -35,6 +35,7 @@
   <li><a href="#protokoll-zum-15032023">Protokoll zum 15.03.2023</a></li>
   <li><a href="#protokoll-zum-17032023">Protokoll zum 17.03.2023</a></li>
   <li><a href="#protokoll-zum-20032023">Protokoll zum 20.03.2023</a></li>
+  <li><a href="#protokoll-zum-05042023">Protokoll zum 05.04.2023</a></li>
 </ul></details></p>
 
 
@@ -69,3 +70,6 @@ sqlhandler.py kann nun die Funktion set_init_settings(). Mit Hilfe dieser wird n
 ### Protokoll zum 20.03.2023
 
 sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
+
+### Protokoll zum 05.04.2023
+
