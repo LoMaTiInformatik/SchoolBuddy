@@ -21,12 +21,20 @@
 </br>
 
 
+## Inhalt
+<p><a href="#kapitell">1. Einleitung</a></p>
+<p style="margin-bottom: 5px;">
+<details style="margin: 0px !important;">
+<summary>2. Stundenprotokolle</summary>
+<ul>
 
-### 06.02.2023
+
+
+### Protokoll zum 06.02.2023
 
 Wir haben heute die "speak()" und die "listen()" Funktionen vollendet. Dadurch kann das Programm bereits uns verstehen und auch reden.
 
-### 08.02.2023
+### Protokoll zum 08.02.2023
 
 Heute haben wir mit dem Installations- und Konfigurationsskript angefangen.
 
