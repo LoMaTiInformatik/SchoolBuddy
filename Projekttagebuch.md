@@ -38,7 +38,7 @@
   <li><a href="#protokoll-zum-05042023">Protokoll zum 05.04.2023</a></li>
 </ul></details></p>
 <p style="margin-top: 5px;"><a href="#kapitel3">3. Materialien</a></p>
-<p><a href="#kapitel4">5. Quellen</a></p>
+<p><a href="#kapitel4">4. Quellen</a></p>
 
 
 <h2 id="kapitell">1. Einleitung</h2>
@@ -90,4 +90,4 @@ Folgend
 <p><a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a></p>
 <p><a href="https://github.com/thorstenMueller/Thorsten-Voice">Thorsten Voice</a></p>
 <p><a href="https://www.mysql.com/">MySQL</a></p>
-Alle weiteren Quellen sind in der Pipfile.lock Datei zu finden.
+<p style="margin-top: 5px;">Alle weiteren Quellen sind in der Pipfile.lock Datei zu finden.</p>
