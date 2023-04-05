@@ -49,39 +49,31 @@ Der Großteil des Codes ist in dem Unterordner /src/ hier auf GitHub zu finden o
 <h2 id="kapitel2">2. Protokolle</h2>
 
 ### Protokoll zum 06.02.2023
-
 Wir haben heute die "speak()" und die "listen()" Funktionen vollendet. Dadurch kann das Programm bereits uns verstehen und auch reden.
 
 ### Protokoll zum 08.02.2023
-
 Heute haben wir mit dem Installations- und Konfigurationsskript angefangen.
 
 ### Protokoll zum 10.02.2023
-
 Das Konfigurationsskript ist fertig. Das Installationsskript können wir erst vollenden, wenn wir mit dem allgemeinen Programm fertig sind.
 
 ### Protokoll zum 13.02.2023
-
 Die bereits aufgetretenen Fehler des Installationsskripes wurden behoben.
 
 ### Protokoll zum 14.03.2023
-
 setup.py angefangen zu schreiben. Nun führt es sqlhandler.py aus um die Datenbank zu populieren.
 
 ### Protokoll zum 15.03.2023
-
 Minimale Veränderungen am Installationsskript getätigt
 
 ### Protokoll zum 17.03.2023
-
 sqlhandler.py kann nun die Funktion set_init_settings(). Mit Hilfe dieser wird nun die Datenbank mit den Werten aus dem Konfigurationsskript gefüllt.
 
 ### Protokoll zum 20.03.2023
-
 sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
 
 ### Protokoll zum 05.04.2023
-
+Heute haben wir beim Projekttag weiter an der Formartierung und der Vervollständigung der Projektseite, sowohl als auch dem Projekttagebuch gearbeitet.
 
 
 <h2 id="kapitel4">4. Materialien</h2>
