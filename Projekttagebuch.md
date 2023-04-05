@@ -1,5 +1,3 @@
-<!-- Muss noch neu geschrieben werden - bin gerade dabei, Max-->
-
 <!--Written by Max Leon Guwa (OrangePurgatory; https://github.com/OrangePurgatory)-->
 
 
