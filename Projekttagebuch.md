@@ -87,3 +87,6 @@ Folgend
 
 <h2 id="kapitel5">5. Quellen</a></h2>
 <p><a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a></p>
+<p><a href="https://github.com/thorstenMueller/Thorsten-Voice">Thorsten Voice</a></p>
+<p><a href="https://www.mysql.com/">MySQL</a></p>
+Alle weiteren Quellen sind in der Pipfile.lock Datei zu finden.
