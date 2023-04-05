@@ -20,24 +20,42 @@
 
 ## Inhalt
 <p><a href="#kapitell">1. Einleitung</a></p>
+<p><a href="#kapitel2">2. Vorstellung des Projekts</a></p>
+<p><a href="#kapitel3">3. Erklärung des Codes</a></p>
+<p><a href="#kapitel4">4. Entstehung des Projekts</a></p>
+<p><a href="#kapitel5">5. Fazit</a></p>
+<p><a href="#kapitel6">6. Quellen</a></p>
+<p><a href="#kapitel7">7. Eigenständigkeitserklärung</a></p>
 
 
 <h2 id="kapitell">1. Einleitung</h2>
 <p>Coming soon</p>
+
+
 <h2 id="kapitel2">2. Vorstellung des Projekts</h2>
 <p>Coming soon</p>
+
+
 <h2 id="kapitel3">3. Erkärung des Codes</h2>
 <p>Coming soon</p>
+
+
 <h2 id="kapitel4">4. Entstehung des Projekts</h2>
 <p>Coming soon</p>
+
+
 <h2 id="kapitel5">5. Fazit</h2>
 <p>Coming soon</p>
+
+
 <h2 id="kapitel6">6. Quellen</h2>
 <a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a><br>
 <a href="https://github.com/thorstenMueller/Thorsten-Voice">Thorsten Voice</a><br>
 <a href="https://www.mysql.com/">MySQL</a><br>
 Alle weiteren Quellen sind in der Pipfile.lock Datei zu finden.
-<h2 id="kapitell">7. Eigenständigkeitserklärung</h2>
+
+
+<h2 id="kapitel7">7. Eigenständigkeitserklärung</h2>
 
 <b>Eigenständigkeitserklärung</b></br>
 <p>Wir erklären, dass wir die vorliegende Arbeit selbstständig und ohne Benutzung anderer als den 
