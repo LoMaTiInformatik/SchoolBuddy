@@ -28,6 +28,7 @@
 <summary>2. Stundenprotokolle</summary>
 <ul>
   <li><a href="#protokoll-zum-06022023">Protokoll zum 06.02.2023</a></li>
+</ul></details></p>
 
 
 ### Protokoll zum 06.02.2023
