@@ -27,7 +27,7 @@
 <details style="margin: 0px !important;">
 <summary>2. Stundenprotokolle</summary>
 <ul>
-
+  <li><a href="#protokoll-zum-06022023">Protokoll zum 06.02.2023</a></li>
 
 
 ### Protokoll zum 06.02.2023
@@ -38,26 +38,26 @@ Wir haben heute die "speak()" und die "listen()" Funktionen vollendet. Dadurch k
 
 Heute haben wir mit dem Installations- und Konfigurationsskript angefangen.
 
-### 10.02.2023
+### Protokoll zum 10.02.2023
 
 Das Konfigurationsskript ist fertig. Das Installationsskript können wir erst vollenden, wenn wir mit dem allgemeinen Programm fertig sind.
 
-### 13.02.2023
+### Protokoll zum 13.02.2023
 
 Die bereits aufgetretenen Fehler des Installationsskripes wurden behoben.
 
-### 14.03.2023
+### Protokoll zum 14.03.2023
 
 setup.py angefangen zu schreiben. Nun führt es sqlhandler.py aus um die Datenbank zu populieren.
 
-### 15.03.2023
+### Protokoll zum 15.03.2023
 
 Minimale Veränderungen am Installationsskript getätigt
 
-### 17.03.2023
+### Protokoll zum 17.03.2023
 
 sqlhandler.py kann nun die Funktion set_init_settings(). Mit Hilfe dieser wird nun die Datenbank mit den Werten aus dem Konfigurationsskript gefüllt.
 
-### 20.03.2023
+### Protokoll zum 20.03.2023
 
 sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
