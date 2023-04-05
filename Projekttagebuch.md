@@ -90,7 +90,7 @@ sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
 Folgend
 
 <h2 id="kapitel5">5. Quellen</a></h2>
-<a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a>
-<a href="https://github.com/thorstenMueller/Thorsten-Voice">Thorsten Voice</a>
-<a href="https://www.mysql.com/">MySQL</a>
+<a href="https://github.com/espeak-ng/espeak-ng">ESpeak-ng</a><br>
+<a href="https://github.com/thorstenMueller/Thorsten-Voice">Thorsten Voice</a><br>
+<a href="https://www.mysql.com/">MySQL</a><br>
 Alle weiteren Quellen sind in der Pipfile.lock Datei zu finden.
