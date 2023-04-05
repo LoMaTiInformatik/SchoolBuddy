@@ -45,12 +45,6 @@ def get_settings(valueonly: bool = True):
             "error": "mysql-1",
             "value": ""
         }
-    
-    return {
-        "error": "unknown",
-        "value": "You shouldn't be here."
-    }
-
 
 def get_setting(settname: str, valueonly: bool = True):
     try:
@@ -85,11 +79,6 @@ def get_setting(settname: str, valueonly: bool = True):
             "error": "mysql-1",
             "value": ""
         }
-    
-    return {
-        "error": "unknown",
-        "value": "You shouldn't be here."
-    }
 
 def set_init_settings():
     try:
