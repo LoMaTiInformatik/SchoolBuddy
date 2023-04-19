@@ -18,7 +18,7 @@
 <h3 align="left"> &#10132; <a href="https://github.com/LoMaTiInformatik/SchoolBuddy/blob/main/Projekttagebuch.md"> Projekttagebuch</a> </h3> 
 </br>
 
-## Inhalt
+<h2>Inhalt</h2>
 <p><a href="#kapitell">1. Einleitung</a></p>
 <p><a href="#kapitel2">2. Vorstellung des Projekts</a></p>
 <p><a href="#kapitel3">3. Erklärung des Codes</a></p>
