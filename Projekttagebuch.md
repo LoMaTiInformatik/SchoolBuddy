@@ -78,7 +78,8 @@ Heute haben wir beim Projekttag weiter an der Formartierung und der Vervollstän
 
 
 <h2 id="kapitel4">4. Materialien</h2>
-Coming soon
+- Raspberry Pi<br>
+- Lautsprecher
 
 
 <h2 id="kapitel5">5. Quellen</a></h2>

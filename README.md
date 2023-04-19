@@ -30,7 +30,7 @@
 
 
 <h2 id="kapitell">1. Einleitung</h2>
-<p>Coming soon</p>
+<p>Hallo und herzlich Wilkommen zu unserer Projektseite. Dies ist die Hauptseite des gesamten Projektes. Hier ist das Projekt allgemein zusammengefasst und erklärt.</p>
 
 
 <h2 id="kapitel2">2. Vorstellung des Projekts</h2>
