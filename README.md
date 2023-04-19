@@ -39,9 +39,41 @@
 <p>Also dachten wir uns, wieso nicht ein Produkt erstellen, welches den Alltag von Schülern und Schülerinnen erleichtert, indem es den Stundenplan von WebUntis nach Sprachaufforderung laut vorließt und man nicht sein Handy herrausholen muss oder den Stundenplan auf den Fernsehern in der Schule prüfen muss.</p>
 <p>Aktuell ist das Projekt noch nicht fertiggestellt, also können wir die Funktion des Produktes hier noch nicht zeigen. Dies wird allerdings in unserer nächsten Abgabe hier zu sehen sein.</p>
 
+<details>
+  <summary>Bilder zum Projekt</summary>
+  Bilder hier (L)
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="">
+      <source media="(prefers-color-scheme: light)" srcset="">
+      <img alt="" src="">
+  </picture>
+</details>
+</br>
+
+<details>
+  <summary>Schaltplan</summary>
+  Schaltplan coming soon
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="">
+      <source media="(prefers-color-scheme: light)" srcset="">
+      <img alt="" src="">
+  </picture>
+</details>
+</br>
+
+<details>
+  <summary>Funktion (Mindmap)</summary>
+  Mindmap hier (L)
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="">
+      <source media="(prefers-color-scheme: light)" srcset="">
+      <img alt="" src="">
+  </picture>
+</details>
+</br>
 
 <h2 id="kapitel3">3. Erkärung des Codes</h2>
-<p>Coming soon</p>
+<p>Coming soon (L)</p>
 
 
 <h2 id="kapitel4">4. Entstehung des Projekts</h2>
