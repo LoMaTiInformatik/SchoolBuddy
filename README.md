@@ -81,7 +81,11 @@
 
 
 <h2 id="kapitel5">5. Fazit</h2>
-<p>Coming soon</p>
+<p>Aktuell können wir noch kein finales Fazit, auf das gesamte Projekt betrachtet, abgeben. Dies ist deswegen, weil wir das Projekt noch nicht vollständig abgeschlossen haben und es noch vieles zu tun gibt. Allerdings können wir schonmal auf das gemachte und vergangene ein Fazit geben.</p>
+<p>Die Projektfindung am Anfang hat sich diesmal ziemlich einfach dargestellt, da wir schon bereits vor dem Beginn der neuen Projektperiode, die Idee hatten diesen Alltagshelfer zu entwickeln.</p>
+<p>Das Entwickeln des Konzeptes ist etwas anspruchsvoller gewesen, da wir erstmal herrausfinden mussten, welche Arbeitsmaterialien für uns zur Verfügung standen, und welche nicht.</p>
+<p>Die eigendliche Umsetzung des Projekts hat prinzipiell erst gerade begonnen und es steht noch der Rest des Halbjahres vor uns. Die ersten Schritte dort hin haben sich als schwierig dargestellt, da das Arbeiten, mit für uns neuen Materialien, Übung und Erfahrung braucht.</p>
+<p>Insgesamt kommen wir jedoch gut vorran und das Projekt nähert sich immer weiter seiner Fertigstellung, mit der kurz vor Anfang der Sommerferien 2023 gerechnet wird.</p>
 
 
 <h2 id="kapitel6">6. Quellen</h2>
