@@ -77,7 +77,9 @@
 
 
 <h2 id="kapitel4">4. Entstehung des Projekts</h2>
-<p>Coming soon</p>
+<p>Es war ziehmlich einfach für uns das richtige Projekt zu finden, anders als im letzen Halbjahr. Die Idee für den Schoolbuddy bekamen wir schon letztes Jahr, während wir an unserem vorherigen Projekt gearbeitet haben. Die Idee hat sich auch direkt als gut umsetzbar herausgestellt, also begannen wir mit der Entwicklung eines Konzeptes für das Projekt. Ohne Konzept und Struktur, würde man sich bei so einem Projekt schnell vertun können.</p>
+<p>Schnell wurde auch dieses Mal klar, dass der eine Teil des Projekts zu Anspruchsvoll für alle Teilnehmer der Gruppe sein wird, also haben wir, so wie auch beim letzten Mal, die Arbeit in verschiedene Teile aufgesplittet.</p>
+<p>Wärend der eine an dem Backend gearbeitet hat, hat der andere die Aufgabe gehabt, an den Befehlen usw. zu arbeiten. Diese Teile hatten verschiedene Schwierigkeitsstuffen, also hat der mehr Erfahrene an den schwierigeren Dingen gearbeitet, während der Andere an den etwas einfacheren Dingen gearbeitet hat.</p>
 
 
 <h2 id="kapitel5">5. Fazit</h2>
