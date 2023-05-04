@@ -22,7 +22,38 @@ errordef = {
     "mysql-1": {
     "log": "Error mysql-1: Database failure",
     "speak": "Fehler mai s q l 1. Es gab einen Fehler mit der Datenbank.",
-    "severity": 3}
+    "severity": 3},
+
+    "cmdh-1": {
+    "log": "Error cmdh-1: No keyword found in input",
+    "speak": "Ich konnte keinen passenden Befehl für deine Anfrage finden. Bitte versuche es erneut.",
+    "severity": 1},
+
+    "cmdh-2": {
+    "log": "Error cmdh-2: No command matching keywords found",
+    "speak": "Ich konnte keinen passenden Befehl für deine Anfrage finden. Bitte versuche es erneut.",
+    "severity": 1},
+
+    "cmdh-3": {
+    "log": "Error cmdh-3: No chosencmd. How did this even happen?",
+    "speak": "Ich konnte keinen passenden Befehl für deine Anfrage finden. Bitte versuche es erneut.",
+    "severity": 1},
+}
+
+# Syntax
+# "word": {"typeword": "Topic word to choose cmd", "weight": The weight of the word (how definitive is it)}
+
+# 
+
+keywords = {
+    "uhr": {
+        "typeword": "time",
+        "weight": 5
+    }
+}
+
+cmdkeywords = {
+    
 }
 
 def handleerror(errcode: str):
