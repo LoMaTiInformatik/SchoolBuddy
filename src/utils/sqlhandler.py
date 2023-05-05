@@ -6,8 +6,8 @@ pw=os.getenv('SCHOOLBUDDY_SQLPWD')
 db = mysql.connect(
     host="localhost",
     user="schoolbuddy",
-    pw=pw,
-    database="schoolbuddy"
+    password=pw,
+    database="schoolbuddy",
 )
 
 def get_settings(valueonly: bool = True):

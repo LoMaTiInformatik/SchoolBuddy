@@ -1,5 +1,5 @@
 import logging
-from definitions import keywords
+from utils.definitions import keywords
 
 # Commands
 
@@ -34,6 +34,7 @@ def handlecmd(spktext: str):
     }
 
     for x in spktext.split(" "):
+        x = x.lower()
         if x not in keywords:
             continue
 
@@ -77,7 +78,11 @@ def handlecmd(spktext: str):
                 "value": ""
             }
 
-    chosencmd = {}
+    chosencmd = {
+        "times": 0,
+        "weight": 0,
+        "name": ""
+    }
 
     for x in cmdlist:
         if cmdlist[x]["times"] < chosencmd["times"]:
@@ -91,7 +96,7 @@ def handlecmd(spktext: str):
         chosencmd["times"] = cmdlist[x]["times"]
     
     else:
-        if not chosencmd:
+        if not chosencmd or chosencmd["name"] == "":
             return {
                 "error": "cmdh-3",
                 "value": ""

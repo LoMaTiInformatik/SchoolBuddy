@@ -17,6 +17,7 @@ def speak(text):
     tts = TTS("tts_models/de/thorsten/tacotron2-DDC")
     wav = tts.tts(text=text)
     sd.play(wav, 23000)
+    sd.wait()
     return {
         "error": "",
         "value": ""
@@ -39,7 +40,7 @@ def question(text):
 
 def cancel():
     try:
-        sd.stop()
+        #sd.stop()
         return {
             "error": "",
             "value": ""
