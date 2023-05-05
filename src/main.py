@@ -11,5 +11,9 @@ def activate():
     spkres = listen()
     if spkres["error"] != "":
         handleerror(spkres["error"])
+        return
+    
+
+    
     
     

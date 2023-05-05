@@ -38,6 +38,11 @@ errordef = {
     "log": "Error cmdh-3: No chosencmd. How did this even happen?",
     "speak": "Ich konnte keinen passenden Befehl für deine Anfrage finden. Bitte versuche es erneut.",
     "severity": 1},
+
+    "time-1": {
+    "log": "Error time-1: Unkown",
+    "speak": "Es gab einen Fehler bei der Bearbeitung deiner Anfrage.",
+    "severity": 1},
 }
 
 # Syntax
@@ -49,15 +54,19 @@ keywords = {
     "uhr": {
         "typeword": "time",
         "weight": 5
+    },
+    "welt": {
+        "typeword": "helloworld",
+        "weight": 1
     }
-}
-
-cmdkeywords = {
-    
 }
 
 def handleerror(errcode: str):
     err = errordef[errcode]
+    if not err:
+        speak("Ein unbekannter Fehler ist aufgetreten.")
+        return
+    
     if err["severity"] == 0:
         logging.debug(err["log"])
     elif err["severity"] == 1:

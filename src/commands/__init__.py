@@ -1,1 +1,1 @@
-__all__ = ["helloworld"]
+__all__ = ["helloworld","timecmd"]
