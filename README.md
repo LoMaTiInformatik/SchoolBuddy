@@ -31,7 +31,7 @@
 
 <h2 id="kapitell">1. Einleitung</h2>
 <p>Hallo und herzlich willkommen zu unserer Projektseite für unser Projekt. Hier erklären wir das Verfahren, unsere Ideen und erklären das Endprodukt.</br>
-<a href="https://github.com/LoMaTiInformatik/SchoolBuddy"> Hier</a> kommst du zu der Arduino GitHub Repository und <a href="https://github.com/LoMaTiInformatik/SchoolBuddy/blob/main/docs/Projekttagebuch.md"> hier</a> zur Protokollseite.</p>
+<a href="https://github.com/LoMaTiInformatik/SchoolBuddy/blob/main/docs/Projekttagebuch.md"> Hier</a> kommst du zur Protokollseite.</p>
 
 
 <h2 id="kapitel2">2. Vorstellung des Projekts</h2>
