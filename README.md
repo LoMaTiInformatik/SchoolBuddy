@@ -42,6 +42,27 @@
 <details>
   <summary>Bilder zum Projekt</summary>
     <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="">
+      <source media="(prefers-color-scheme: light)" srcset="">
+      <img alt="" src="">
+    </picture>
+  </details>
+</br>
+
+<details>
+  <summary>Schaltplan</summary>
+  Schaltplan coming soon
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="">
+      <source media="(prefers-color-scheme: light)" srcset="">
+      <img alt="" src="">
+  </picture>
+</details>
+</br>
+
+<details>
+  <summary>Funktion (Mindmap)</summary>
+    <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/105984356/236512208-bd00606b-d08e-4d2d-ab62-b8f6c84df860.png">
       <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/105984356/236512208-bd00606b-d08e-4d2d-ab62-b8f6c84df860.png">
       <img alt="" src="">
@@ -67,27 +88,6 @@
       <img alt="" src="">
     </picture>
   </details>
-</br>
-
-<details>
-  <summary>Schaltplan</summary>
-  Schaltplan coming soon
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="">
-      <source media="(prefers-color-scheme: light)" srcset="">
-      <img alt="" src="">
-  </picture>
-</details>
-</br>
-
-<details>
-  <summary>Funktion (Mindmap)</summary>
-  Mindmap hier (L)
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="">
-      <source media="(prefers-color-scheme: light)" srcset="">
-      <img alt="" src="">
-  </picture>
 </details>
 </br>
 
