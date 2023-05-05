@@ -15,7 +15,7 @@
 
 
 <h3 align="left">Stormarnschule Ahrensburg <br/> Informatik, Buhl <br/> Schuljahr 2022/23, 2. Halbjahr </br> </h3> </div>
-<h3 align="left"> &#10132; <a href="https://github.com/LoMaTiInformatik/SchoolBuddy/blob/main/Projekttagebuch.md"> Projekttagebuch</a> </h3> 
+<h3 align="left"> &#10132; <a href="https://github.com/LoMaTiInformatik/SchoolBuddy/blob/main/docs/Projekttagebuch.md"> Projekttagebuch</a> </h3> 
 </br>
 
 <h2>Inhalt</h2>
@@ -31,7 +31,7 @@
 
 <h2 id="kapitell">1. Einleitung</h2>
 <p>Hallo und herzlich willkommen zu unserer Projektseite für unser Projekt. Hier erklären wir das Verfahren, unsere Ideen und erklären das Endprodukt.</br>
-<a href="https://github.com/LoMaTiInformatik/SchoolBuddy"> Hier</a> kommst du zu der Arduino GitHub Repository und <a href="https://github.com/LoMaTiInformatik/SchoolBuddy/blob/main/Projekttagebuch.md"> hier</a> zur Protokollseite.</p>
+<a href="https://github.com/LoMaTiInformatik/SchoolBuddy"> Hier</a> kommst du zu der Arduino GitHub Repository und <a href="https://github.com/LoMaTiInformatik/SchoolBuddy/blob/main/docs/Projekttagebuch.md"> hier</a> zur Protokollseite.</p>
 
 
 <h2 id="kapitel2">2. Vorstellung des Projekts</h2>
@@ -79,7 +79,7 @@
 <h2 id="kapitel4">4. Entstehung des Projekts</h2>
 <p>Es war ziehmlich einfach für uns das richtige Projekt zu finden, anders als im letzen Halbjahr. Die Idee für den Schoolbuddy bekamen wir schon letztes Jahr, während wir an unserem vorherigen Projekt gearbeitet haben. Die Idee hat sich auch direkt als gut umsetzbar herausgestellt, also begannen wir mit der Entwicklung eines Konzeptes für das Projekt. Ohne Konzept und Struktur, würde man sich bei so einem Projekt schnell vertun können.</p>
 <p>Schnell wurde auch dieses Mal klar, dass der eine Teil des Projekts zu Anspruchsvoll für alle Teilnehmer der Gruppe sein wird, also haben wir, so wie auch beim letzten Mal, die Arbeit in verschiedene Teile aufgesplittet.</p>
-<p>Wärend der eine an dem Backend gearbeitet hat, hat der andere die Aufgabe gehabt, an den Befehlen usw. zu arbeiten. Diese Teile hatten verschiedene Schwierigkeitsstuffen, also hat der mehr Erfahrene an den schwierigeren Dingen gearbeitet, während der Andere an den etwas einfacheren Dingen gearbeitet hat.</p>
+<p>Wärend der eine an dem Backend gearbeitet hat, hat der andere die Aufgabe gehabt, an den Befehlen usw. zu arbeiten. Diese Teile hatten verschiedene Schwierigkeitsstufen, also hat der mehr Erfahrene an den schwierigeren Dingen gearbeitet, während der Andere an den etwas einfacheren Dingen gearbeitet hat.</p>
 
 
 <h2 id="kapitel5">5. Fazit</h2>
