@@ -61,7 +61,7 @@
       <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/105984356/236514763-f15e6bae-5a48-42ad-be04-6634345a3382.png">
       <img alt="" src="">
     </picture>
-        <picture>
+    <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/105984356/236515004-3c9c6c38-c090-46e0-a5c3-69f6e3fc7ea0.png">
       <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/105984356/236515004-3c9c6c38-c090-46e0-a5c3-69f6e3fc7ea0.png">
       <img alt="" src="">
