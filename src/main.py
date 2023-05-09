@@ -10,12 +10,12 @@ from utils.cmdhandler import handlecmd
  #   first_run()
 
 def activate():
+    logging.basicConfig(level=logging.DEBUG, filename="log.txt")
     spkres = listen()
     if spkres["error"] != "":
         handleerror(spkres["error"])
         return
-    
-    logging.debug(spkres["value"])
+
     cmdres = handlecmd(spkres["value"])
     if cmdres["error"] != "":
         handleerror(cmdres["error"])
