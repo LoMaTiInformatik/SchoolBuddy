@@ -1,1 +1,1 @@
-__all__ = ["helloworld","timecmd"]
+__all__ = ["changestoday","helloworld","lessonend","nextlesson","timecmd","timefirstlesson","timelastlesson"]
