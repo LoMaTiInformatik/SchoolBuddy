@@ -2,7 +2,7 @@ import requests
 import json
 
 
-with open('weathercodelist.json') as x:
+with open('weatherapicodes.json') as x:
     codelist = json.load(x)
 
 
