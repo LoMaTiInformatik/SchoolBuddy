@@ -37,6 +37,9 @@
   <li><a href="#protokoll-zum-05042023">Protokoll zum 05.04.2023</a></li>
   <li><a href="#protokoll-zum-04052023">Protokoll zum 04.05.2023</a></li>
   <li><a href="#protokoll-zum-05052023">Protokoll zum 05.05.2023</a></li>
+  <li><a href="#zeitraum-vom-05052023-bis-zum-13062023">Zeitraum vom 06.05.2023 bis zum 13.06.2023</a></li>
+  <li><a href="#protokoll-zum-14062023">Protokoll zum 14.06.2023</a></li>
+  <li><a href="#protokoll-zum-15062023">Protokoll zum 15.06.2023</a></li>
 </ul></details></p>
 <p style="margin-top: 5px;"><a href="#kapitel3">3. Materialien</a></p>
 <p><a href="#kapitel4">4. Quellen</a></p>
