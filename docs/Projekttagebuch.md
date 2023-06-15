@@ -370,6 +370,7 @@ def cmdfunction(spktext: str):
             "value": ""
         }
 ```
+<br>
 
 ### Zeitraum vom 06.05.2023 bis zum 13.06.2023
 Wir hatten uns ein paar Mal in diesem Zeitraum getroffen und uns überlegt, welche weiteren Möglichkeiten für unser Projekt bestehen. Außerdem haben wir außerhalb dieser und jeglicher Repository, Tests an verschiedenen Programmen durchgeführt.<br>
