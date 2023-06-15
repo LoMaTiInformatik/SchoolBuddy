@@ -1,12 +1,13 @@
 import requests
 import json
 
+keywords = ['weather']
 
 with open('weatherapicodes.json') as x:
     codelist = json.load(x)
 
 
-def cmdfunction():
+def cmdfunction(): #
     weather_url = 'http://api.weatherapi.com/v1/current.json'
     api_key = 'c88d5fcfad014b909ae94202231506'
     
@@ -33,8 +34,7 @@ def cmdfunction():
         if (is_day == 0):
             condition = codelist[str(condition_code)]["night"]
 
-        output = "Das aktuelle Wetter in " + str(location) + " " + str(country) + ": " + "Es ist " + str(temp_c) + " Grad Celsius und es " + str(condition)
-
+        output = "Das aktuelle Wetter in " + str(location) + ", " + str(country) + ": " + "Es ist " + str(temp_c) + " Grad Celsius und " + str(condition) + "."
         print(output)
         #return {
             #"error": "",
