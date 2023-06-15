@@ -1,13 +1,17 @@
+# Import used libraries
 import requests
 import json
 
+# Set the keyword
 keywords = ['weather']
 
+# Getting the weather code data from 'weatherapicodes.json'
 with open('weatherapicodes.json') as x:
     codelist = json.load(x)
 
 
 def cmdfunction(spktext: str):
+    # Defining the API url and using the private API key
     weather_url = 'http://api.weatherapi.com/v1/current.json'
     api_key = 'c88d5fcfad014b909ae94202231506'
     
@@ -18,6 +22,7 @@ def cmdfunction(spktext: str):
             'lang': 'de'
         }
 
+        # Getting the data from the API and reading the .json file recieved
         response = requests.get(weather_url, params=params)
         response.raise_for_status()
         
@@ -29,15 +34,18 @@ def cmdfunction(spktext: str):
         condition_code = weather_data['current']['condition']['code']
         is_day = weather_data['current']['is_day']
 
+
         condition = codelist[str(condition_code)]['day']
 
         if (is_day == 0):
             condition = codelist[str(condition_code)]['night']
 
+
         temphc = 'warm'
 
         if (temp_c < 10):
             temphc = 'kalt'
+
 
         output = "Das aktuelle Wetter in " + str(location) + ", " + str(country) + ": " + "Es ist " + str(temp_c) + " Grad Celsius " + str(temphc) + " und " + str(condition) + "."
         #print(output)
