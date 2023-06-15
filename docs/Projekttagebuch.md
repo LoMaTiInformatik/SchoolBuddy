@@ -271,7 +271,7 @@ def get_settings(valueonly: bool = True):
 Heute haben wir beim Projekttag weiter an der Formartierung und der Vervollständigung der Projektseite, sowohl als auch dem Projekttagebuch gearbeitet.
 
 ### Protokoll zum 04.05.2023
-Mit der Arbeit am cmdhandler.py begonnen. Zurzeit kann ich das geschriebene noch nicht testen, deswegen hoffe ich einfach.
+Mit der Arbeit am cmdhandler.py begonnen. Zurzeit können wir das geschriebene noch nicht testen, deswegen hoffe ich einfach, dass das Programm soweit in dieser Form funktioniert.
 ```py
 def handlecmd(spktext: str):
     typewords = {
@@ -315,7 +315,7 @@ def handlecmd(spktext: str):
 ```
 
 ### Protokoll zum 05.05.2023
-Der cmdhandler.py ist nun vollständig funktionsfähig. Außerdem habe ich kurz den timecmd.py geschrieben, der dir sagt wie viel Uhr es ist.
+Der cmdhandler.py ist nun vollständig funktionsfähig. Außerdem haben wir zum testen den timecmd.py Code geschrieben, der einem einfach mitteilt, wie viel Uhr es ist.
 ```py
 for x in cmdlist:
         if cmdlist[x]["times"] < chosencmd["times"]:
