@@ -383,7 +383,8 @@ Da wir auch am letzten Projekttag bereits angefangen hatten Fritzing mit Hilfe v
 Heute haben wir weitere Dateien für die Commands erstellt und haben bereits angefangen diese zu schreiben. Ebenfalls haben wir ein paar Korrekturen an bereits vorhandenen Code vorgenommen. Mit der Finalisierung dieser Commands, erwarten wir bald eine Vervollständigung des Projektes. Es fehlen nur noch einige Details und Bugfixes.
 
 ### Protokoll zum 15.06.2023
-Heute stand ein weiterer Projekttag nach etwa einem Monat an. Wir hatten uns für heute vorgenommen, dass wir heute ein paar Commands fertigstellen und eine Art ausarbeiten, wie wir das Projekt präsentieren wollen. 
+Heute stand ein weiterer Projekttag nach etwa einem Monat an. Wir hatten uns für heute vorgenommen, dass wir heute ein paar Commands fertigstellen und eine Art ausarbeiten, wie wir das Projekt präsentieren wollen.<br>
+Schlussendlich haben wir den Wetter Command fertigstellen können, welcher mithilfe einer API das aktuelle Wetter von deinem Standort ausgeben kann.
 
 <h2 id="kapitel4">4. Materialien</h2>
 - Raspberry Pi<br>
