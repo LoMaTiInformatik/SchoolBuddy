@@ -234,7 +234,7 @@ def set_init_settings():
 ```
 
 ### Protokoll zum 20.03.2023
-sqlhandler.py kann nun Einträge aus den Datenbanken abrufen.
+sqlhandler.py kann nun Einträge aus den Datenbanken abrufen. Hierfür benutzen wir eine MySQL Datenbank, womit der unten stehende Code die eingetragenen Daten auslesen kann.
 ```py
 def get_settings(valueonly: bool = True):
     try:
@@ -268,7 +268,8 @@ def get_settings(valueonly: bool = True):
 ```
 
 ### Protokoll zum 05.04.2023
-Heute haben wir beim Projekttag weiter an der Formartierung und der Vervollständigung der Projektseite, sowohl als auch dem Projekttagebuch gearbeitet.
+Heute haben wir beim Projekttag weiter an der Formartierung und der Vervollständigung der Projektseite, sowohl als auch dem Projekttagebuch gearbeitet.<br>
+Außerdem haben gegen Ende des Tages versucht das Circuit-Building Programm "Fritzing" mit Hilfe von Qt eigenständig zu builden. Grund hierfür ist die kostenpflichtige Version von Fritzing, die durch eigenes Builden des Programmes umgangen werden kann.
 
 ### Protokoll zum 04.05.2023
 Mit der Arbeit am cmdhandler.py begonnen. Zurzeit können wir das geschriebene noch nicht testen, deswegen hoffe ich einfach, dass das Programm soweit in dieser Form funktioniert.
@@ -316,6 +317,8 @@ def handlecmd(spktext: str):
 
 ### Protokoll zum 05.05.2023
 Der cmdhandler.py ist nun vollständig funktionsfähig. Außerdem haben wir zum testen den timecmd.py Code geschrieben, der einem einfach mitteilt, wie viel Uhr es ist.
+
+Der Code im Command-Handler (cmdhandler.py):
 ```py
 for x in cmdlist:
         if cmdlist[x]["times"] < chosencmd["times"]:
@@ -341,6 +344,8 @@ for x in cmdlist:
 
     return res
 ```
+<br>
+Der Code als Command in timecmd.py:
 ```py
 import time as timemod
 keywords = ["time"]
@@ -365,6 +370,15 @@ def cmdfunction(spktext: str):
         }
 ```
 
+### Zeitraum vom 06.05.2023 bis zum 13.06.2023
+Wir hatten uns ein paar Mal in diesem Zeitraum getroffen und uns überlegt, welche weiteren Möglichkeiten für unser Projekt bestehen. Außerdem haben wir außerhalb dieser und jeglicher Repository, Tests an verschiedenen Programmen durchgeführt.<br>
+Da wir auch am letzten Projekttag bereits angefangen hatten Fritzing mit Hilfe von Qt zu builden, hatten wir in diesem Zeitraum auch mehrere Versuche angestrebt, dies fertigzustellen. Bisher verbleibt dies allerdings weiterhin bei einem Misserfolg, denn es treten immer noch verschiedene Fehler auf.
+
+### Protokoll zum 14.06.2023
+Heute haben wir weitere Dateien für die Commands erstellt und haben bereits angefangen diese zu schreiben. Ebenfalls haben wir ein paar Korrekturen an bereits vorhandenen Code vorgenommen. Mit der Finalisierung dieser Commands, erwarten wir bald eine Vervollständigung des Projektes. Es fehlen nur noch einige Details und Bugfixes.
+
+### Protokoll zum 15.06.2023
+Heute stand ein weiterer Projekttag nach etwa einem Monat an. Wir hatten uns für heute vorgenommen, dass wir heute ein paar Commands fertigstellen und eine Art ausarbeiten, wie wir das Projekt präsentieren wollen. 
 
 <h2 id="kapitel4">4. Materialien</h2>
 - Raspberry Pi<br>
