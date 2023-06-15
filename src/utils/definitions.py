@@ -43,6 +43,11 @@ errordef = {
     "log": "Error time-1: Unkown",
     "speak": "Es gab einen Fehler bei der Bearbeitung deiner Anfrage.",
     "severity": 1},
+
+    "weather-1": {
+    "log": "Error weather-1: Internet connection error",
+    "speak": "Ich konnte die Wetterdaten nicht abrufen. Bitte überprüfe deine Internetverbindung.",
+    "severity": 2},
 }
 
 # Syntax
@@ -58,6 +63,14 @@ keywords = {
     "welt": {
         "typeword": "helloworld",
         "weight": 1
+    },
+    "änderungen": {
+        "typeword": "changes",
+        "weight": 5
+    },
+    "wetter": {
+        "typeword": "weather",
+        "weight": 5
     }
 }
 
