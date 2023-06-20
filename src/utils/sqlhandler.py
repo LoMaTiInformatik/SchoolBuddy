@@ -1,4 +1,30 @@
-import mysql.connector as mysql
+from dotenv import load_dotenv
+import os
+
+gotenv = load_dotenv()
+
+def get_settings():
+    if (not gotenv):
+        return {
+            "error": "sett-1",
+            "value": ""
+        }
+    
+    settings = {}
+    settings["webuserver"] = os.getenv("SCHOOLBUDDY_WEBUSERVER")
+    settings["webuschool"] = os.getenv("SCHOOLBUDDY_WEBUSCHOOL")
+    settings["webuuser"] = os.getenv("SCHOOLBUDDY_WEBUUSER")
+    settings["webupwd"] = os.getenv("SCHOOLBUDDY_WEBUPWD")
+    settings["webuclass"] = os.getenv("SCHOOLBUDDY_WEBUCLASS")
+
+    return {
+        "error": "",
+        "value": settings
+    }
+
+
+# Old sql stuff
+'''import mysql.connector as mysql
 import os
 
 pw=os.getenv('SCHOOLBUDDY_SQLPWD')
@@ -111,4 +137,4 @@ def set_init_settings():
     return {
         "error": "",
         "value": "true"
-    }
+    }'''

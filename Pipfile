@@ -10,6 +10,8 @@ tts = "*"
 sounddevice = "*"
 webuntis = "*"
 mysql-connector-python = "*"
+python-dotenv = "*"
+requests = "*"
 
 [dev-packages]
 

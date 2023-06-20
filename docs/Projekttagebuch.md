@@ -386,6 +386,9 @@ Heute haben wir weitere Dateien für die Commands erstellt und haben bereits ang
 Heute stand ein weiterer Projekttag nach etwa einem Monat an. Wir hatten uns für heute vorgenommen, dass wir heute ein paar Commands fertigstellen und eine Art ausarbeiten, wie wir das Projekt präsentieren wollen.<br>
 Schlussendlich haben wir den Wetter Command fertigstellen können, welcher mithilfe einer API das aktuelle Wetter von deinem Standort ausgeben kann.
 
+### Protokoll zum 20.06.2023
+Heute wurde der Wetter Befehl in das Programm integriert und eine neue Funktion hinzugefügt, welche Einstellungen aus einer .env Datei lesen kann.
+
 <h2 id="kapitel4">4. Materialien</h2>
 - Raspberry Pi<br>
 - Lautsprecher

@@ -1,13 +1,9 @@
 # Import used libraries
+from utils.definitions import weatherapicodes as codelist
 import requests
-import json
 
 # Set the keyword
 keywords = ['weather']
-
-# Getting the weather code data from 'weatherapicodes.json'
-with open('weatherapicodes.json') as x:
-    codelist = json.load(x)
 
 
 def cmdfunction(spktext: str):
@@ -45,9 +41,12 @@ def cmdfunction(spktext: str):
 
         if (temp_c < 10):
             temphc = 'kalt'
+        
+        if (str(temp_c).index(".")):
+            temp_c = str(temp_c).replace("."," komma ")
 
 
-        output = "Das aktuelle Wetter in " + str(location) + ", " + str(country) + ": " + "Es ist " + str(temp_c) + " Grad Celsius " + str(temphc) + " und " + str(condition) + "."
+        output = "Hier ist das aktuelle Wetter in " + str(location) + ", " + str(country) + ". " + "Es ist " + str(temp_c) + " Grad Celsius " + str(temphc) + " und " + str(condition) + "."
         #print(output)
 
         return {

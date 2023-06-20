@@ -1,15 +1,13 @@
+from utils.sqlhandler import get_settings
 import webuntis
 
-server = ""
-school = ""
-user = ""
-pwd = ""
+sett = get_settings()
 
 s = webuntis.Session(
-    server=server,
-    username=user,
-    password=pwd,
-    school=school,
+    server=sett["webuserver"],
+    username=sett["webuuser"],
+    password=sett["webupwd"],
+    school=sett["webuschool"],
     useragent="SchoolBuddy"
 )
 
