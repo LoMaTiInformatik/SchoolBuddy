@@ -1,5 +1,4 @@
 import speech_recognition as sr
-import logging
 
 
 def listen():
@@ -10,7 +9,7 @@ def listen():
 
     mic = sr.Microphone()
 
-    logging.warn("Listening")
+    print("Listening")
     with mic as source:
         audio = r.listen(source)
 
