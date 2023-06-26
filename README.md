@@ -93,7 +93,351 @@
 </br>
 
 <h2 id="kapitel3">3. Erkärung des Codes</h2>
-<p>Zuerst fangen wir mit X an.</p>
+<p>Zuerst fangen wir mit dem Hauptscript an.</p>
+<br>
+<h4 id="main.py">main.py</h4>
+
+Erst einmal werden die ganzen benötigten Module importiert.
+
+```py
+import os
+import logging
+from utils.stt import listen
+from utils.definitions import handleerror
+from utils.speak import speak
+from utils.cmdhandler import handlecmd
+```
+
+<br>
+
+Die activate Funktion wird deklariert und es wird das Log-Level gesetzt.
+
+```py
+def activate():
+    # Record audio and handle command
+    logging.basicConfig(level=logging.DEBUG, filename="log.txt")
+    spkres = listen()
+```
+
+<br>
+
+Hier wird das zuhören gestartet. Sobald die listen Funktion etwas zurückgibt wird auf einen Error gecheckt.
+
+```py
+    spkres = listen()
+    if spkres["error"] != "":
+        handleerror(spkres["error"])
+        return
+```
+
+<br>
+
+Jetzt wird der erkannte Text an die cmdhandle Funktion weitergegeben, um den gewünschten Befehl auszuführen und anschließend den Text der von dem Befehl zurück gegeben wird wiederzugeben.
+
+```py
+    cmdres = handlecmd(spkres["value"])
+    if cmdres["error"] != "":
+        handleerror(cmdres["error"])
+        return
+    
+    speak(cmdres["value"])
+```
+
+<br>
+
+<h3 id="utils">Utils</h3>
+
+Die Utils oder auch Utilityscripts sind Skripte, die von vielen Funktionen und anderen Skripten verwendet werden.
+
+<br>
+
+<h4 id="cmdhandler.py">cmdhandler.py</h4>
+
+cmdhandler.py ist das Skript, das herausfindet welcher Befehl gewollt ist und den gesprochenen Text an diesen weitergibt.
+<br>
+Hier werden alle Befehle die existieren in das Skript geladen.
+
+```py
+for x in dir(commands):
+    if x.startswith("__"):
+        continue
+
+    mod = getattr(commands, x)
+    cmdkeywords[x] = {"keywords": mod.keywords}
+
+    logging.debug(str.format("Cmdhandler: Command module {} sucessfully added.", x))
+```
+
+<br>
+
+Nun wird die cmdhandle Funktion definiert. Dann wird der gesprochene Text in einzelne Wörter zersetzt und jedes dieser Wörter wird auf die sog. "Keywords" getestet.
+
+```py
+def handlecmd(spktext: str):
+    typewords = {
+        1: {"word": None,
+            "weight": 0},
+        2: {"word": None,
+            "weight": 0},
+        3: {"word": None,
+            "weight": 0},
+        4: {"word": None,
+            "weight": 0},
+        5: {"word": None,
+            "weight": 0}
+    }
+
+    # Handle keywords
+    for x in spktext.split(" "):
+        x = x.lower()
+        if x not in keywords:
+            continue
+
+        key = keywords[x]
+        succ = False
+
+        for y in typewords:
+            if typewords[y]["weight"] >= key["weight"]:
+                continue
+
+            typewords[y] = {"word": key["typeword"], "weight": key["weight"]}
+            succ = True
+            break
+
+        else:
+            if not succ:
+                logging.debug(str.format("CmdHandler: Word {} did not match a keyword.",x))
+    else:
+        if typewords[1]["word"] == None:
+            return {
+                "error": "cmdh-1",
+                "value": ""
+            }
+```
+
+<br>
+
+Sobald alle "Keywords" aus dem gesprochenen Text extrahiert wurden, wird bei allen Befehlen geprüft bei welchem Befehl am meisten von diesen "Keywords" übereinstimmen. Dann wird dieser Befehl ausgeführt.
+
+```py
+    cmdlist = {}
+
+    for x in cmdkeywords:
+        cmdlist[x] = {"times": 0, "weight": 0}
+        for y in typewords:
+            if not typewords[y]["word"] in cmdkeywords[x]["keywords"]:
+                continue
+
+            cmdlist[x]["times"] += 1
+            cmdlist[x]["weight"] += typewords[y]["weight"]
+        
+        else:
+            logging.debug(str.format("Cmdhandler: Cmd {} had {} matches with the collective weight of {}.", x, cmdlist[x]["times"], cmdlist[x]["weight"]))
+    else:
+        if not cmdlist:
+            return {
+                "error": "cmdh-2",
+                "value": ""
+            }
+
+    chosencmd = {
+        "times": 0,
+        "weight": 0,
+        "name": ""
+    }
+
+    for x in cmdlist:
+        if cmdlist[x]["times"] < chosencmd["times"]:
+            continue
+        elif cmdlist[x]["times"] == chosencmd["times"]:
+            if cmdlist[x]["weight"] < chosencmd["weight"]:
+                continue
+        
+        chosencmd["name"] = x
+        chosencmd["weight"] = cmdlist[x]["weight"]
+        chosencmd["times"] = cmdlist[x]["times"]
+    
+    else:
+        if not chosencmd or chosencmd["name"] == "":
+            return {
+                "error": "cmdh-3",
+                "value": ""
+            }
+
+    mod = getattr(commands, chosencmd["name"])
+
+    res = mod.cmdfunction(spktext)
+```
+
+<br>
+
+<h4 id="speak.py">speak.py</h4>
+
+speak.py ist für die Sprachausgabe zuständig.
+
+<br>
+
+Erst wird das TTS-Modul importiert, um den Text sprechen zu können. In der speak Funktion wird der eingegebene text in das TTS-Modul gegeben und die resultierende wav abgespielt.
+
+```py
+from TTS.api import TTS
+import sounddevice as sd
+
+def speak(text):
+
+    """
+        Speaks the given text
+
+        Arguments:
+        text: Text to speak (str)
+
+        Returns:
+        error: Error-Code if any (str)
+        value: None (str)
+    """
+
+    tts = TTS("tts_models/de/thorsten/tacotron2-DDC")
+    wav = tts.tts(text=text)
+    sd.play(wav, 23000)
+    sd.wait()
+    return {
+        "error": "",
+        "value": ""
+    }
+```
+
+<br>
+
+<h4 id="stt.py">stt.py</h4>
+
+stt.py ist für die Umwandlung von Sprache in Text zuständig.
+
+<br>
+
+Das Audio wird aufgenommen und an den Google-TTS-Dienst weitergegeben und der resultierende Text wieder zurückgegeben.
+
+```py
+import speech_recognition as sr
+import logging
+
+
+def listen():
+
+    """Returns the spoken text."""
+
+    r = sr.Recognizer()
+
+    mic = sr.Microphone()
+
+    logging.warn("Listening")
+    with mic as source:
+        audio = r.listen(source)
+
+    try:
+        # Give audio to google to get text
+        text = r.recognize_google(audio, language="de-DE", show_all=False)
+        return {
+            "error": "",
+            "value": text
+        }
+    except sr.UnknownValueError:
+        return {
+            "error": "stt-1",
+            "value": ""
+        }
+    except:
+        return {
+            "error": "stt-2",
+            "value": ""
+        }
+```
+
+<br>
+
+<h4 id="webuntishandler.py">webuntishandler.py</h4>
+
+webuntishandler.py wandelt das Resultat der WebUntis-API in python-verständliche Daten um.
+
+<br>
+
+Die Einstellungen für WebUntis werden aus dem sqlhandler ausgelesen und damit wird das eine WebUntis-Session erstellt.
+
+```py
+from utils.sqlhandler import get_settings
+import webuntis
+import datetime
+
+sett = get_settings()["value"]
+
+# Create session from settings
+s = webuntis.Session(
+    server=sett["webuserver"],
+    username=sett["webuuser"],
+    password=sett["webupwd"],
+    school=sett["webuschool"],
+    useragent="SchoolBuddy"
+)
+```
+
+<br>
+
+Die Funktion get_lesson_plan wird deklariert. Diese ist dafür zuständlich den Stundenplan des gesamten Tages zu besorgen. Nun wird die vorab eingestellte Klasse definiert und das heutige Datum erschlossen. Mit diesen Informationen wird der Stundenplan dieser bestimmten Zeitspanne erfragt.
+
+```py
+
+def get_lesson_plan(day,sort:bool=True):
+
+    s.login()
+
+    # Get class from settings
+    klasse = s.klassen().filter(name=sett["webuclass"])[0]
+
+    start_date = None
+    end_date = None
+    if (day == "tmrw"):
+        curday = datetime.datetime.now() + datetime.timedelta(days=2)
+        start_date = datetime.datetime(year=curday.year,month=curday.month,day=curday.day)
+        end_date = start_date + datetime.timedelta(hours=23)
+    else:
+        curday = datetime.datetime.now()
+        start_date = datetime.datetime(year=curday.year,month=curday.month,day=curday.day)
+        end_date = start_date + datetime.timedelta(hours=23)
+
+    # Get plan for given day
+    lesson_plan = s.timetable(klasse=klasse, start=start_date, end=end_date)
+```
+
+<br>
+
+Der erhaltene Stundenplan wird hier nach Uhrzeit sortiert und an die ausführende Funktion zurückgegeben.
+
+```py
+
+    if lesson_plan:
+        if sort:
+            # Sort lessons and return plan
+            sorted_lessons = sorted(lesson_plan, key=lambda lesson: lesson.start.strftime("%H:%M"))
+            print("Next Lessons:")
+            for next_lesson in sorted_lessons:
+                subjects = ', '.join([subject.name for subject in next_lesson.subjects])
+                rooms = ', '.join([room.name for room in next_lesson.rooms])
+
+                print(f"Subject: {subjects}")
+                print(f"Room: {rooms}")
+                print(f"Start Time: {next_lesson.start.strftime('%H:%M')}")
+                print(f"End Time: {next_lesson.end.strftime('%H:%M')}")
+                print()
+            
+            return {
+                "error": "",
+                "value": sorted_lessons
+            }
+        else:
+            return {
+                "error": "",
+                "value": lesson_plan
+            }
+```
 
 <br>
 <h3 id="befehle">Befehle</h3>
