@@ -8,6 +8,7 @@ from commands import *
 
 cmdkeywords = {}
 
+# Import all commands
 for x in dir(commands):
     if x.startswith("__"):
         continue
@@ -33,6 +34,7 @@ def handlecmd(spktext: str):
             "weight": 0}
     }
 
+    # Handle keywords
     for x in spktext.split(" "):
         x = x.lower()
         if x not in keywords:

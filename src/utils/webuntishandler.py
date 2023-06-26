@@ -4,6 +4,7 @@ import datetime
 
 sett = get_settings()["value"]
 
+# Create session from settings
 s = webuntis.Session(
     server=sett["webuserver"],
     username=sett["webuuser"],
@@ -16,6 +17,7 @@ def get_lesson_plan(day,sort:bool=True):
 
     s.login()
 
+    # Get class from settings
     klasse = s.klassen().filter(name=sett["webuclass"])[0]
 
     start_date = None
@@ -29,11 +31,13 @@ def get_lesson_plan(day,sort:bool=True):
         start_date = datetime.datetime(year=curday.year,month=curday.month,day=curday.day)
         end_date = start_date + datetime.timedelta(hours=23)
 
+    # Get plan for given day
     lesson_plan = s.timetable(klasse=klasse, start=start_date, end=end_date)
 
 
     if lesson_plan:
         if sort:
+            # Sort lessons and return plan
             sorted_lessons = sorted(lesson_plan, key=lambda lesson: lesson.start.strftime("%H:%M"))
             print("Next Lessons:")
             for next_lesson in sorted_lessons:

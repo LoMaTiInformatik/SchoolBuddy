@@ -10,6 +10,7 @@ from utils.cmdhandler import handlecmd
  #   first_run()
 
 def activate():
+    # Record audio and handle command
     logging.basicConfig(level=logging.DEBUG, filename="log.txt")
     spkres = listen()
     if spkres["error"] != "":

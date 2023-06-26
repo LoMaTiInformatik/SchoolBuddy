@@ -15,6 +15,7 @@ def listen():
         audio = r.listen(source)
 
     try:
+        # Give audio to google to get text
         text = r.recognize_google(audio, language="de-DE", show_all=False)
         return {
             "error": "",

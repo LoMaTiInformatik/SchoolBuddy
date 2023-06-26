@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 
+# Get settings from .env file
 gotenv = load_dotenv()
 
 def get_settings():
@@ -17,6 +18,7 @@ def get_settings():
     settings["webupwd"] = os.getenv("SCHOOLBUDDY_WEBUPWD")
     settings["webuclass"] = os.getenv("SCHOOLBUDDY_WEBUCLASS")
 
+    # Return settings
     return {
         "error": "",
         "value": settings
