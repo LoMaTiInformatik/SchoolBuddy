@@ -95,7 +95,8 @@
 <p>Zuerst fangen wir mit X an.</p>
 
 <br>
-### Befehle
+<u><b>Befehle</u></b>
+<br>
 <b>lessonplantoday.py</b>
 <br>
 Was man zuerst macht, ist den exportierten Stundenplan von dem webuntishandler zu bekommen. Dies macht man wie folgt:
