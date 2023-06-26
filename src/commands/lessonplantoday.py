@@ -8,7 +8,7 @@ def cmdfunction(spktext: str):
 
         text = "Du hast heute "
         for next_lesson in lesson_plan:
-            subjects = ', '.join([subject.name for subject in next_lesson.subjects])
+            subjects = ', '.join([subject.long_name for subject in next_lesson.subjects])
             start_time = next_lesson.start.strftime("%H:%M")
             end_time = next_lesson.end.strftime("%H:%M")
             next_text = f"{subjects} von {start_time} bis {end_time}."
