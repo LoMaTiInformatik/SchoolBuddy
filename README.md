@@ -41,6 +41,7 @@
 
 <details>
   <summary>Bilder zum Projekt</summary>
+  Noch keine Bilder vorhanden, da für das Projekt bisher nur ein Computer verwendet wurde.
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="">
       <source media="(prefers-color-scheme: light)" srcset="">
@@ -51,10 +52,9 @@
 
 <details>
   <summary>Schaltplan</summary>
-  Schaltplan coming soon
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="">
-      <source media="(prefers-color-scheme: light)" srcset="">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/LoMaTiInformatik/SchoolBuddy/assets/105984356/96e6d178-cf00-460e-85f8-beee85a83a4b">
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/LoMaTiInformatik/SchoolBuddy/assets/105984356/96e6d178-cf00-460e-85f8-beee85a83a4b">
       <img alt="" src="">
   </picture>
 </details>
@@ -92,8 +92,189 @@
 </br>
 
 <h2 id="kapitel3">3. Erkärung des Codes</h2>
-<p>Coming soon (L)</p>
+<p>Zuerst fangen wir mit X an.</p>
 
+<br>
+### Befehle
+#### lessonplantoday.py
+<br>
+Was man zuerst macht, ist den exportierten Stundenplan von dem webuntishandler zu bekommen. Dies macht man wie folgt:
+
+```py
+from utils.webuntishandler import get_lesson_plan
+```
+
+<br>
+Nun sagt man, auf welches Schlüsselwort der Befehl reagieren soll. Dies definiert man wie folgt:
+
+```py
+keywords = ["lessonplan"]
+```
+
+<br>
+Dann definiert man den Befehl, den der Code später ausgeben soll. Hier sagt man, dass der Code versuchen soll die Stunden für den heutigen Tag zu nehmen und diese in einen String zu packen. Beispeil: "Du hast heute Physik von 8:40 bis 9:25." usw.
+
+```py
+def cmdfunction(spktext: str):
+    try:
+        lesson_plan = get_lesson_plan("today")
+
+        text = "Du hast heute "
+        for next_lesson in lesson_plan:
+            subjects = ', '.join([subject.long_name for subject in next_lesson.subjects])
+            start_time = next_lesson.start.strftime("%H:%M")
+            end_time = next_lesson.end.strftime("%H:%M")
+            next_text = f"{subjects} von {start_time} bis {end_time}."
+            text += next_text + " "
+```
+
+<br>
+Schließlich soll der Code den zusammengetzen String als value zurückgeben. Sollte es einen Fehler geben und der Code hat keinen String generiert, soll der Code den Error "sst-2" geben. "sst-2" ist in definitions.py angegeben.
+
+```py
+        return {
+            "error": "",
+            "value": text
+        }
+    except:
+        return {
+            "error": "sst-2",
+            "value": ""
+        }
+```
+<br>
+#### timecmd.py
+<br>
+Zuerst importiert man eine Library, die die aktuelle Zeit auslesen kann. Dies macht man wie folgt:
+
+```py
+import time as timemod
+```
+<br>
+
+Nun definiert man wieder das Schlüssenwort, auf das der Befehl hören soll:
+
+```py
+keywords = ["time"]
+```
+<br>
+
+Jetzt definiert man wieder den Befehl, der dann ausgesprochen werden soll. Dieser soll einmal versuchen die aktuelle Stunde von der Library zu bekommen und das andere Mal die Minute. Dies soll er dann in einen String zusammensetzen, der dann zum Beispiel lautet: "Es ist 12 Uhr 30.".
+
+```py
+def cmdfunction(spktext: str):
+    try:
+        hour = timemod.strftime("%H", timemod.localtime())
+        minute = timemod.strftime("%M", timemod.localtime())
+
+        text = "Es ist " + hour + " Uhr"
+        if minute != "00":
+            text += " " + minute
+```
+<br>
+
+Zuletzt soll der String weiter an das TTS gegeben werden. Sollte etwas schief laufen, soll der Code den Error "time-1" geben. Dieser ist auch in definitions.py zu finden.
+
+```py
+        return {
+            "error": "",
+            "value": text
+        }
+    except:
+        return {
+            "error": "time-1",
+            "value": ""
+        }
+```
+<br>
+#### weather.py
+<br>
+Zuerst werden die in definitions.py angegebenen weatherapicodes als eine Codeliste importiert. Ebenso wird die Library "requests" genommen.
+
+```py
+from utils.definitions import weatherapicodes as codelist
+import requests
+```
+<br>
+Nun, wie immer, wird das Schlüsselwort definiert, auf welches der Befehl hören soll.
+
+```py
+keywords = ['weather']
+```
+
+Jetzt wird der Befehl definiert, der den Text später als String rausgeben soll. Außerdem wird hier definiert, welche API wir verwenden und mit welchem API Key wir Zugang zur API bekommen.
+
+```py
+def cmdfunction(spktext: str):
+    weather_url = 'http://api.weatherapi.com/v1/current.json'
+    api_key = 'X'
+```
+<br>
+
+Hier definieren wir nun die Parameter, welche Daten zwischen der API und dem Sender ausgetauscht werden sollen. Der Key wurde oben bereits definiert, muss aber anders für die API geschrieben werden. Das "q" definiert hier den Standort des Senders, welche die aktuelle Position von der IP-Addresse des Senders bekommt. "lang" ist hier die Sprache die ausgegeben werden soll.
+
+```py
+    try:
+        params = {
+            'key': api_key,
+            'q': 'auto:ip',
+            'lang': 'de'
+        }
+```
+<br>
+Nun werden hier die benötigten Daten von der API genommen und in Variablen geschrieben, sodass man diese einfacher verwenden kann.
+
+```py
+        response = requests.get(weather_url, params=params)
+        response.raise_for_status()
+        
+        weather_data = response.json()
+        
+        location = weather_data['location']['name']
+        country = weather_data['location']['country']
+        temp_c = weather_data['current']['temp_c']
+        condition_code = weather_data['current']['condition']['code']
+        is_day = weather_data['current']['is_day']
+```
+<br>
+Da die API auch auf Tag/Nacht achtet, muss man nun sagen, wann die API uns die Daten für den Tag geben soll und wann für die Nacht.
+
+```py
+        condition = codelist[str(condition_code)]['day']
+
+
+        if (is_day == 0):
+            condition = codelist[str(condition_code)]['night']
+```
+<br>
+Hier definieren wir nun, wann im String für die Temperatur "warn" und wann "kalt" gesagt werden soll.
+
+```py
+        temphc = 'warm'
+
+        if (temp_c < 10):
+            temphc = 'kalt'
+        
+        if (str(temp_c).index(".")):
+            temp_c = str(temp_c).replace("."," komma ")
+```
+<br>
+Nun setzen wir hier den String aus allen Informationen, die wir gesammelt haben, zusammen. Außerden geben wir den zusammengesetzen String zurück. Sollte dies nicht klappen, soll der Code den Error "weather-1" geben. Dieser Error ist in definitions.py angegeben.
+
+```py
+        output = "Hier ist das aktuelle Wetter in " + str(location) + ", " + str(country) + ". " + "Es ist " + str(temp_c) + " Grad Celsius " + str(temphc) + " und " + str(condition) + "."
+
+        return {
+            "error": "",
+            "value": output
+        }
+    
+    except:
+        return {
+            "error": "weather-1",
+            "value": ""
+        }
+```
 
 <h2 id="kapitel4">4. Entstehung des Projekts</h2>
 <p>Es war ziehmlich einfach für uns das richtige Projekt zu finden, anders als im letzen Halbjahr. Die Idee für den Schoolbuddy bekamen wir schon letztes Jahr, während wir an unserem vorherigen Projekt gearbeitet haben. Die Idee hat sich auch direkt als gut umsetzbar herausgestellt, also begannen wir mit der Entwicklung eines Konzeptes für das Projekt. Ohne Konzept und Struktur, würde man sich bei so einem Projekt schnell vertun können.</p>
