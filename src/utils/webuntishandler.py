@@ -2,7 +2,7 @@ from utils.sqlhandler import get_settings
 import webuntis
 import datetime
 
-sett = get_settings()
+sett = get_settings()["value"]
 
 s = webuntis.Session(
     server=sett["webuserver"],
@@ -12,30 +12,26 @@ s = webuntis.Session(
     useragent="SchoolBuddy"
 )
 
-s.login()
-
-now = datetime.datetime.now()
-
-start_date = now.strftime("%Y%m%d")
-end_date = (now + datetime.timedelta(days=1)).strftime("%Y%m%d")
-
-classes = s.klassen()
-klasse = None
-
-# 11p has the ID 893
-for c in classes:
-    if c.id == 893:
-        klasse = c
-        break
-
-if klasse:
-    next_lessons = s.timetable(klasse=klasse, start=start_date, end=end_date)
-else:
-    print("Klasse mit der ID 893 wurde nicht gefunden.")
-
 def get_lesson_plan(day):
-    if next_lessons:
-        sorted_lessons = sorted(next_lessons, key=lambda lesson: lesson.start)
+
+    s.login()
+
+    klasse = s.klassen().filter(name=sett["webuclass"])[0]
+
+    start_date = None
+    end_date = None
+    if (day == "tmrw"):
+        start_date = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y%m%d")
+        end_date = (datetime.datetime.now() + datetime.timedelta(days=2)).strftime("%Y%m%d")
+    else:
+        start_date = (datetime.datetime.now()).strftime("%Y%m%d")
+        end_date = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime("%Y%m%d")
+
+    lesson_plan = s.timetable(klasse=klasse, start=start_date, end=end_date)
+
+
+    if lesson_plan:
+        sorted_lessons = sorted(lesson_plan, key=lambda lesson: lesson.start.strftime("%H:%M"))
 
         print("Next Lessons:")
         for next_lesson in sorted_lessons:
@@ -49,6 +45,8 @@ def get_lesson_plan(day):
             print()
     else:
         print("Keine kommenden Unterrichte gefunden.")
+
+    s.logout()
 
     # Get whole lesson plan
     # Args: day (today/tmrw)
