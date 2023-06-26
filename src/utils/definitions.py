@@ -77,7 +77,7 @@ keywords = {
         "typeword": "weather",
         "weight": 5
     },
-    "Stundenplan": {
+    "stundenplan": {
         "typeword": "lessonplan",
         "weight": 4
     }
