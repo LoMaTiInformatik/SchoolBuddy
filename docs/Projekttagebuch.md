@@ -40,6 +40,9 @@
   <li><a href="#zeitraum-vom-06052023-bis-zum-13062023">Zeitraum vom 06.05.2023 bis zum 13.06.2023</a></li>
   <li><a href="#protokoll-zum-14062023">Protokoll zum 14.06.2023</a></li>
   <li><a href="#protokoll-zum-15062023">Protokoll zum 15.06.2023</a></li>
+  <li><a href="#protokoll-zum-20062023">Protokoll zum 20.06.2023</a></li>
+  <li><a href="#protokoll-zum-21062023">Protokoll zum 21.06.2023</a></li>
+  <li><a href="#protokoll-zum-26062023">Protokoll zum 26.06.2023</a></li>
 </ul></details></p>
 <p style="margin-top: 5px;"><a href="#kapitel3">3. Materialien</a></p>
 <p><a href="#kapitel4">4. Quellen</a></p>
@@ -470,6 +473,103 @@ def get_lesson(day, lessonnum):
     # Returns single lesson
 
 s.logout
+```
+
+### Protokoll zum 26.06.2023
+Heute haben wir noch letzte Vorkehrungen getroffen, wie unter anderem den webuntishandler fertiggestellt, sowie den lessonplantoday Command. Außerdem haben wir noch Kommentare zu den Codes hinzugefügt, damit der Code für einen Dritten besser und einfacher zu verstehen ist.<br>
+Der Code für den webuntishandler ist hier zu finden:
+```py
+from utils.sqlhandler import get_settings
+import webuntis
+import datetime
+
+sett = get_settings()["value"]
+
+s = webuntis.Session(
+    server=sett["webuserver"],
+    username=sett["webuuser"],
+    password=sett["webupwd"],
+    school=sett["webuschool"],
+    useragent="SchoolBuddy"
+)
+
+def get_lesson_plan(day,sort:bool=True):
+
+    s.login()
+
+    klasse = s.klassen().filter(name=sett["webuclass"])[0]
+
+    start_date = None
+    end_date = None
+    if (day == "tmrw"):
+        curday = datetime.datetime.now() + datetime.timedelta(days=2)
+        start_date = datetime.datetime(year=curday.year,month=curday.month,day=curday.day)
+        end_date = start_date + datetime.timedelta(hours=23)
+    else:
+        curday = datetime.datetime.now()
+        start_date = datetime.datetime(year=curday.year,month=curday.month,day=curday.day)
+        end_date = start_date + datetime.timedelta(hours=23)
+
+    lesson_plan = s.timetable(klasse=klasse, start=start_date, end=end_date)
+
+
+    if lesson_plan:
+        if sort:
+            sorted_lessons = sorted(lesson_plan, key=lambda lesson: lesson.start.strftime("%H:%M"))
+            print("Next Lessons:")
+            for next_lesson in sorted_lessons:
+                subjects = ', '.join([subject.name for subject in next_lesson.subjects])
+                rooms = ', '.join([room.name for room in next_lesson.rooms])
+
+                print(f"Subject: {subjects}")
+                print(f"Room: {rooms}")
+                print(f"Start Time: {next_lesson.start.strftime('%H:%M')}")
+                print(f"End Time: {next_lesson.end.strftime('%H:%M')}")
+                print()
+            
+            return {
+                "error": "",
+                "value": sorted_lessons
+            }
+        else:
+            return {
+                "error": "",
+                "value": lesson_plan
+            }
+    else:
+        print("Keine kommenden Unterrichte gefunden.")
+
+    s.logout()
+```
+<br>
+Und der Code für den lessonplantoday Command ist hier zu finden:
+
+```py
+from utils.webuntishandler import get_lesson_plan
+
+keywords = ["lessonplan"]
+
+def cmdfunction(spktext: str):
+    try:
+        lesson_plan = get_lesson_plan("today")
+
+        text = "Du hast heute "
+        for next_lesson in lesson_plan:
+            subjects = ', '.join([subject.long_name for subject in next_lesson.subjects])
+            start_time = next_lesson.start.strftime("%H:%M")
+            end_time = next_lesson.end.strftime("%H:%M")
+            next_text = f"{subjects} von {start_time} bis {end_time}."
+            text += next_text + " "
+
+        return {
+            "error": "",
+            "value": text
+        }
+    except:
+        return {
+            "error": "sst-2",
+            "value": ""
+        }
 ```
 
 <h2 id="kapitel4">4. Materialien</h2>
