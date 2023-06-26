@@ -95,10 +95,9 @@
 <p>Zuerst fangen wir mit X an.</p>
 
 <br>
-<u><b>Befehle</u></b>
-<br>
-<b>lessonplantoday.py</b>
-<br>
+<h3 id="befehle">Befehle</h3>
+<h3 id="lessonplantoday.py">lessonplantoday.py</h3>
+
 Was man zuerst macht, ist den exportierten Stundenplan von dem webuntishandler zu bekommen. Dies macht man wie folgt:
 
 ```py
@@ -144,8 +143,8 @@ Schließlich soll der Code den zusammengetzen String als value zurückgeben. Sol
         }
 ```
 <br>
-<b>timecmd.py</b>
-<br>
+<h3 id="timecmd.py">timecmd.py</h3>
+
 Zuerst importiert man eine Library, die die aktuelle Zeit auslesen kann. Dies macht man wie folgt:
 
 ```py
@@ -188,8 +187,8 @@ Zuletzt soll der String weiter an das TTS gegeben werden. Sollte etwas schief la
         }
 ```
 <br>
-<b>weather.py</b>
-<br>
+<h3 id="weather.py">weather.py</h3>
+
 Zuerst werden die in definitions.py angegebenen weatherapicodes als eine Codeliste importiert. Ebenso wird die Library "requests" genommen.
 
 ```py
