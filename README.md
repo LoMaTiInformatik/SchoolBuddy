@@ -43,11 +43,6 @@
 <p>Aktuell ist das Projekt noch nicht fertiggestellt, also können wir die Funktion des Produktes hier noch nicht zeigen. Dies wird allerdings in unserer nächsten Abgabe hier zu sehen sein.</p>
 <details>
   <summary>Proof-of-concept-Video</summary>
-  <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/LoMaTiInformatik/SchoolBuddy/assets/39123442/5dc1f07a-c417-4101-8b6f-f623a444a521">
-      <source media="(prefers-color-scheme: light)" srcset="https://github.com/LoMaTiInformatik/SchoolBuddy/assets/39123442/5dc1f07a-c417-4101-8b6f-f623a444a521">
-      <img alt="" src="https://github.com/LoMaTiInformatik/SchoolBuddy/assets/39123442/5dc1f07a-c417-4101-8b6f-f623a444a521">
-    </picture>
   https://github.com/LoMaTiInformatik/SchoolBuddy/assets/39123442/5dc1f07a-c417-4101-8b6f-f623a444a521
 </details>
 
