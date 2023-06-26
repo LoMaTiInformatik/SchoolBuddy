@@ -96,7 +96,7 @@
 
 <br>
 ### Befehle
-#### lessonplantoday.py
+### lessonplantoday.py
 <br>
 Was man zuerst macht, ist den exportierten Stundenplan von dem webuntishandler zu bekommen. Dies macht man wie folgt:
 
@@ -143,7 +143,7 @@ Schließlich soll der Code den zusammengetzen String als value zurückgeben. Sol
         }
 ```
 <br>
-#### timecmd.py
+### timecmd.py
 <br>
 Zuerst importiert man eine Library, die die aktuelle Zeit auslesen kann. Dies macht man wie folgt:
 
@@ -187,7 +187,7 @@ Zuletzt soll der String weiter an das TTS gegeben werden. Sollte etwas schief la
         }
 ```
 <br>
-#### weather.py
+### weather.py
 <br>
 Zuerst werden die in definitions.py angegebenen weatherapicodes als eine Codeliste importiert. Ebenso wird die Library "requests" genommen.
 
