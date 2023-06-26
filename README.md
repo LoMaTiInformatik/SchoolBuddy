@@ -43,8 +43,11 @@
 <p>Aktuell ist das Projekt noch nicht fertiggestellt, also können wir die Funktion des Produktes hier noch nicht zeigen. Dies wird allerdings in unserer nächsten Abgabe hier zu sehen sein.</p>
 <details>
   <summary>Proof-of-concept-Video</summary>
-  https://github.com/LoMaTiInformatik/SchoolBuddy/assets/39123442/d1bffeb2-ae09-42a3-a32f-2113ffa5a8d3
+  https://github.com/LoMaTiInformatik/SchoolBuddy/assets/39123442/5dc1f07a-c417-4101-8b6f-f623a444a521
 </details>
+
+</br>
+
 <details>
   <summary>Bilder zum Projekt</summary>
   Noch keine Bilder vorhanden, da für das Projekt bisher nur ein Computer verwendet wurde.
