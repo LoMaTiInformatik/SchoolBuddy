@@ -41,7 +41,10 @@
 <p>Das Smartphone war und ist schon einiger Zeit unser Alltagshelfter gewesen. Doch manchmal denkt man sich, wieso es denn nicht noch einfacher gehen kann, wie zum Beispiel mit Alltagshelfern, die man noch nicht einmal mit Tasten, sondern mit Sprachsteuerung bedienen kann. Geräte dieser Art existieren schon seit einiger Zeit auf dem Markt, können allerdings einige spezifische Dinge nicht.</p>
 <p>Also dachten wir uns, wieso nicht ein Produkt erstellen, welches den Alltag von Schülern und Schülerinnen erleichtert, indem es den Stundenplan von WebUntis nach Sprachaufforderung laut vorließt und man nicht sein Handy herrausholen muss oder den Stundenplan auf den Fernsehern in der Schule prüfen muss.</p>
 <p>Aktuell ist das Projekt noch nicht fertiggestellt, also können wir die Funktion des Produktes hier noch nicht zeigen. Dies wird allerdings in unserer nächsten Abgabe hier zu sehen sein.</p>
-
+<details>
+  <summary>Proof-of-concept-Video</summary>
+  https://github.com/LoMaTiInformatik/SchoolBuddy/assets/39123442/d1bffeb2-ae09-42a3-a32f-2113ffa5a8d3
+</details>
 <details>
   <summary>Bilder zum Projekt</summary>
   Noch keine Bilder vorhanden, da für das Projekt bisher nur ein Computer verwendet wurde.
